@@ -15,3 +15,24 @@ C:\Users\rikim\Desktop\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentaci
 C:\Users\rikim\Desktop\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.pdb
 C:\Users\rikim\Desktop\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Login.resources
 C:\Users\rikim\Desktop\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Administrador_Management.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Presentacion.exe.config
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Presentacion.exe
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Presentacion.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Negocio.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Datos.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Negocio.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Datos.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csprojAssemblyReference.cache
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Administrador_Management.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Login.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Properties.Resources.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csproj.GenerateResource.cache
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csproj.CopyComplete
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.exe
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Devueltos.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.EditarInventario.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.InicioAdmin.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Inventario.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.RegistroEmpleado.resources

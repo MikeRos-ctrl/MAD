@@ -35,6 +35,7 @@
             this.txt_correo = new System.Windows.Forms.TextBox();
             this.txt_contra = new System.Windows.Forms.TextBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.btn_registro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +91,7 @@
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(173, 267);
+            this.btn_aceptar.Location = new System.Drawing.Point(96, 268);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(90, 24);
             this.btn_aceptar.TabIndex = 6;
@@ -98,11 +99,23 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // btn_registro
+            // 
+            this.btn_registro.Location = new System.Drawing.Point(225, 268);
+            this.btn_registro.Name = "btn_registro";
+            this.btn_registro.Size = new System.Drawing.Size(90, 24);
+            this.btn_registro.TabIndex = 6;
+            this.btn_registro.Text = "Registro";
+            this.btn_registro.UseVisualStyleBackColor = true;
+            this.btn_registro.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 339);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(421, 339);
+            this.Controls.Add(this.btn_registro);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.txt_contra);
             this.Controls.Add(this.txt_correo);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.TextBox txt_contra;
         private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.Button btn_registro;
     }
 }
