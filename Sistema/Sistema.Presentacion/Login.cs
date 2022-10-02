@@ -44,7 +44,7 @@ namespace Sistema.Presentacion
                     if (user_contra.CompareTo(contra) == 0)
                     {
                         MessageBox.Show("Todo esta bien y ingresar seccion");
-                        Administrador_Management frm = new Administrador_Management();
+                        InicioAdmin frm = new InicioAdmin();
                         frm.Show();
                         this.Hide();
                     }
@@ -54,6 +54,11 @@ namespace Sistema.Presentacion
                     }
                 }
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

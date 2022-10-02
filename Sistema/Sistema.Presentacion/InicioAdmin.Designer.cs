@@ -140,6 +140,7 @@
             this.Controls.Add(this.btn_producto);
             this.Name = "InicioAdmin";
             this.Text = "InicioAdmin";
+            this.Load += new System.EventHandler(this.InicioAdmin_Load);
             this.ResumeLayout(false);
 
         }

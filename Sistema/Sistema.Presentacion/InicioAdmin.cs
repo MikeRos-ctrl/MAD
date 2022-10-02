@@ -26,5 +26,10 @@ namespace Sistema.Presentacion
         {
 
         }
+
+        private void InicioAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
