@@ -35,18 +35,18 @@
             // Dgv_Adinistradores
             // 
             this.Dgv_Adinistradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_Adinistradores.Location = new System.Drawing.Point(12, 67);
+            this.Dgv_Adinistradores.Location = new System.Drawing.Point(12, 92);
             this.Dgv_Adinistradores.Name = "Dgv_Adinistradores";
             this.Dgv_Adinistradores.Size = new System.Drawing.Size(776, 208);
             this.Dgv_Adinistradores.TabIndex = 0;
             // 
-            // Form1
+            // Administrador_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Dgv_Adinistradores);
-            this.Name = "Form1";
+            this.Name = "Administrador_Management";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Adinistradores)).EndInit();
