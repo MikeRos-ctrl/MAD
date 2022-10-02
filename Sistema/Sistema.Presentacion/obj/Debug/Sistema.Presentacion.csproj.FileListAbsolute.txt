@@ -61,3 +61,5 @@ D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Si
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csproj.CopyComplete
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.exe
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.pdb

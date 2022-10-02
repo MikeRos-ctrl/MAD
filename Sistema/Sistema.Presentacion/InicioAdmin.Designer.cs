@@ -66,6 +66,7 @@
             this.btn_usurio.TabIndex = 0;
             this.btn_usurio.Text = "Ver Usuario";
             this.btn_usurio.UseVisualStyleBackColor = true;
+            this.btn_usurio.Click += new System.EventHandler(this.btn_usurio_Click);
             // 
             // btn_devoluciones
             // 

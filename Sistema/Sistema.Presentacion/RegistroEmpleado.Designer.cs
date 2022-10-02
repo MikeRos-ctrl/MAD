@@ -56,10 +56,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Rounded Mplus 1c Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 26);
+            this.label1.Size = new System.Drawing.Size(204, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Añade Un Empleado";
             // 
@@ -220,6 +220,7 @@
             this.btn_aceptar.TabIndex = 4;
             this.btn_aceptar.Text = "Crear";
             this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // btn_cancelar
             // 

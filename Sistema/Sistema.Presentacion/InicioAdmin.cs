@@ -31,5 +31,12 @@ namespace Sistema.Presentacion
         {
 
         }
+
+        private void btn_usurio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistroEmpleado xd = new RegistroEmpleado();
+            xd.Show();
+        }
     }
 }

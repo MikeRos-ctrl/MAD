@@ -4,3 +4,9 @@ C:\Users\rikim\Desktop\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csp
 C:\Users\rikim\Desktop\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\rikim\Desktop\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
 C:\Users\rikim\Desktop\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.AssemblyReference.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb

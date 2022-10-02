@@ -9,3 +9,14 @@ C:\Users\rikim\Desktop\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.csproj.
 C:\Users\rikim\Desktop\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.csproj.CopyComplete
 C:\Users\rikim\Desktop\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.dll
 C:\Users\rikim\Desktop\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Negocio.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Negocio.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Datos.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Entidades.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Datos.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\bin\Debug\Sistema.Entidades.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.csproj.AssemblyReference.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.csproj.CoreCompileInputs.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.csproj.CopyComplete
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Negocio\obj\Debug\Sistema.Negocio.pdb

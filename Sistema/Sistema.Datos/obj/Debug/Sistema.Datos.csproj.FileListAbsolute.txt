@@ -7,3 +7,12 @@ C:\Users\rikim\Desktop\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.csproj.Core
 C:\Users\rikim\Desktop\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.csproj.CopyComplete
 C:\Users\rikim\Desktop\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.dll
 C:\Users\rikim\Desktop\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\bin\Debug\Sistema.Datos.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\bin\Debug\Sistema.Datos.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\bin\Debug\Sistema.Entidades.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\bin\Debug\Sistema.Entidades.pdb
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.csproj.AssemblyReference.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.csproj.CoreCompileInputs.cache
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.csproj.CopyComplete
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.dll
+D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Datos\obj\Debug\Sistema.Datos.pdb
