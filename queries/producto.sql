@@ -1,27 +1,16 @@
-create table `new_producto`(
-  `codigo` varchar(250) primary key unique,
-  `register_date` timestamp DEFAULT CURRENT_TIMESTAMP,
+create table data_producto(
+  codigo varchar(250) primary key,
+  descripcion varchar(250) not null,
+  id_departamento int not null,
+  precio_unitario float not null, -- cuanto me costo
+  unidad_de_medida varchar(250) not null, -- gramos, litros,etc
+  costo float not null, -- a cuanto lo vendo0
+  register_date varchar(60) DEFAULT CURRENT_TIMESTAMP,
+  existencia int not null, -- cantidad de productos
+  punto_de_reorden varchar(255), -- cantidad de dias en los que se va a acabar ese producto
   registered_by varchar(250) not null, -- admin que lo registro
-  foreign key (registered_by) references new_admin(clave)
-  );
-
-insert into new_cajero (clave,registered_by) values ('clave_Cajero_1','qwerbyvtrcfedxs');
-select * from new_cajero;
--- ---------------------------------------------------------------------------------------------------------------------
-
-create table `data_producto`(
-	codigo varchar(250) not null,
-    descuento int not null,
-	descripcion varchar(250) not null,
-	id_departamento int not null,
-	unidad_de_medida varchar(250) not null, -- gramos, litros,etc
-	precio_unitario double not null,-- cuanto me costo
-	costo double not null, -- a cuanto lo vendo
-    `existencia` bit DEFAULT 1,
-    `se_puede_devolver` bit DEFAULT 1,
-    punto_de_reorden int, -- creo que son los voy a comprar mensualmnete
-    foreign key (codigo) references new_producto(codigo),
-    foreign key (id_departamento) references departamentos(id)
+    foreign key (id_departamento) references departamentos_data(id),
+	foreign key (registered_by) references data_admin(clave)
 );
 
 INSERT INTO `mad`.`data_cajero`(`clave`,`nombre`,`curp`,`fecha_nacimiento`,`fecha_ingreso`,`nomina`)
@@ -31,10 +20,10 @@ drop table data_producto;
 -- ---------------------------------------------------------------------------------------------------------------------
 
 create table producto_modifications(
-	`last_modification` timestamp DEFAULT CURRENT_TIMESTAMP,
+  last_modification varchar(60) DEFAULT CURRENT_TIMESTAMP,
     by_who varchar(250) not null, -- admin
     codigo varchar(250) not null,
     what varchar(250) not null,-- que movio?
-	foreign key (by_who) references new_producto(codigo),
-    foreign key (codigo) references new_cajero(clave)
+	foreign key (by_who) references data_cajero(clave),
+    foreign key (codigo) references data_producto(codigo)
 );

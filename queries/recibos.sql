@@ -1,9 +1,11 @@
--- recibos 
-create table recibos(
-	todos_los_productos varchar (250),
-    catidad_de_productos int,
-    subtotal int,
-    total int
+-- sucursales
+create table sucursales(
+	numero int primary key identity,
+	fecha_creacion varchar(60) default current_timestamp,
+	comicilio_completo varchar(250),
+	encargado varchar(250) not null,--admin
+	nombre varchar (250),
+    foreign key (encargado) references data_admin(clave)
 );
 
 
