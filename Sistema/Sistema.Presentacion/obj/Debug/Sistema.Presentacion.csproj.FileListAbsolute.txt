@@ -32,7 +32,6 @@ C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.exe
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.pdb
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Devueltos.resources
-C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.EditarInventario.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.InicioAdmin.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Inventario.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.RegistroEmpleado.resources
@@ -63,3 +62,9 @@ D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Si
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.pdb
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.dll
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.EditarProducto.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Producto.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ReporteCajero.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ReporteVentas.resources

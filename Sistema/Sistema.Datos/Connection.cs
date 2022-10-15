@@ -18,10 +18,10 @@ namespace Sistema.Datos
     
         private Connection()
         {
-            this.Base = "PruebaUwu";
-            this.Servidor = "LAPTOP-GIBBNP5S";
-            this.Usuario = "Mike_Ros";
-            this.Clave = "Lethergo1";
+            this.Base = "Dmarket";
+            this.Servidor = "DESKTOP-DBRQT41\\SQLEXPRESS";
+            this.Usuario = "Daren";
+            this.Clave = "1234";
             this.Seguridad = true;
         }
 

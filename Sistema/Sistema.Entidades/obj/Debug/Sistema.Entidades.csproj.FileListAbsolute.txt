@@ -10,3 +10,9 @@ D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Si
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csprojAssemblyReference.cache
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb
