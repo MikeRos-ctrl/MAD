@@ -43,8 +43,6 @@
             this.CURP = new System.Windows.Forms.TextBox();
             this.nNomina = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
-            this.admin = new System.Windows.Forms.RadioButton();
-            this.cajero = new System.Windows.Forms.RadioButton();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.fNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -190,31 +188,9 @@
             this.Correo.TabIndex = 1;
             this.Correo.TextChanged += new System.EventHandler(this.NomCompleto_TextChanged);
             // 
-            // admin
-            // 
-            this.admin.AutoSize = true;
-            this.admin.Location = new System.Drawing.Point(589, 127);
-            this.admin.Name = "admin";
-            this.admin.Size = new System.Drawing.Size(88, 17);
-            this.admin.TabIndex = 3;
-            this.admin.TabStop = true;
-            this.admin.Text = "Administrador";
-            this.admin.UseVisualStyleBackColor = true;
-            // 
-            // cajero
-            // 
-            this.cajero.AutoSize = true;
-            this.cajero.Location = new System.Drawing.Point(589, 150);
-            this.cajero.Name = "cajero";
-            this.cajero.Size = new System.Drawing.Size(55, 17);
-            this.cajero.TabIndex = 3;
-            this.cajero.TabStop = true;
-            this.cajero.Text = "Cajero";
-            this.cajero.UseVisualStyleBackColor = true;
-            // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(224, 322);
+            this.btn_aceptar.Location = new System.Drawing.Point(202, 322);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar.TabIndex = 4;
@@ -224,12 +200,13 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.Location = new System.Drawing.Point(322, 322);
+            this.btn_cancelar.Location = new System.Drawing.Point(300, 322);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // fNacimiento
             // 
@@ -250,13 +227,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 389);
+            this.ClientSize = new System.Drawing.Size(621, 389);
             this.Controls.Add(this.fIngreso);
             this.Controls.Add(this.fNacimiento);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.cajero);
-            this.Controls.Add(this.admin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -274,6 +249,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RegistroEmpleado";
             this.Text = "RegistroEmpleado";
+            this.Load += new System.EventHandler(this.RegistroEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,8 +272,6 @@
         private System.Windows.Forms.TextBox CURP;
         private System.Windows.Forms.TextBox nNomina;
         private System.Windows.Forms.TextBox Correo;
-        private System.Windows.Forms.RadioButton admin;
-        private System.Windows.Forms.RadioButton cajero;
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.DateTimePicker fNacimiento;

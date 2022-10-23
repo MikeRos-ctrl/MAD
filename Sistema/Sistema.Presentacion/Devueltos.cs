@@ -16,5 +16,12 @@ namespace Sistema.Presentacion
         {
             InitializeComponent();
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InicioCajero xd = new InicioCajero();
+            xd.Show();
+        }
     }
 }

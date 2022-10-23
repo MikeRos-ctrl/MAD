@@ -73,5 +73,17 @@ namespace Sistema.Presentacion
             }
 
         }
+
+        private void RegistroEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InicioAdmin xd = new InicioAdmin();
+            xd.Show();
+        }
     }
 }

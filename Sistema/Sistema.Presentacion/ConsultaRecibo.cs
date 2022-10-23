@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace Sistema.Presentacion
 {
-    public partial class EditarProducto : Form
+    public partial class ConsultaRecibo : Form
     {
-        public EditarProducto()
+        public ConsultaRecibo()
         {
             InitializeComponent();
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
             this.Hide();
-            InicioAdmin xd = new InicioAdmin();
+            InicioCajero xd = new InicioCajero();
             xd.Show();
         }
     }

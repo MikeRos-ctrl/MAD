@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sistema.Presentacion</RootNamespace>
     <AssemblyName>Sistema.Presentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -53,6 +53,12 @@
     <Compile Include="Administrador_Management.Designer.cs">
       <DependentUpon>Administrador_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRecibo.Designer.cs">
+      <DependentUpon>ConsultaRecibo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Devueltos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +77,23 @@
     <Compile Include="InicioAdmin.Designer.cs">
       <DependentUpon>InicioAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioCajero.Designer.cs">
+      <DependentUpon>InicioCajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginCajero.Designer.cs">
+      <DependentUpon>LoginCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
@@ -112,6 +130,9 @@
     <EmbeddedResource Include="Administrador_Management.resx">
       <DependentUpon>Administrador_Management.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRecibo.resx">
+      <DependentUpon>ConsultaRecibo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Devueltos.resx">
       <DependentUpon>Devueltos.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,8 +142,14 @@
     <EmbeddedResource Include="InicioAdmin.resx">
       <DependentUpon>InicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InicioCajero.resx">
+      <DependentUpon>InicioCajero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCajero.resx">
+      <DependentUpon>LoginCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>

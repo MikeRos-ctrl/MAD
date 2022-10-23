@@ -21,5 +21,12 @@ namespace Sistema.Presentacion
         {
 
         }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InicioAdmin xd = new InicioAdmin();
+            xd.Show();
+        }
     }
 }

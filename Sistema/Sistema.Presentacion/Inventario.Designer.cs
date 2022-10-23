@@ -39,6 +39,8 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.Dgv_inventario = new System.Windows.Forms.DataGridView();
             this.cb_Departamento = new System.Windows.Forms.ComboBox();
+            this.btn_aceptar = new System.Windows.Forms.Button();
+            this.btn_recibo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_inventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +117,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(508, 110);
+            this.btn_buscar.Location = new System.Drawing.Point(444, 110);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 6;
@@ -139,12 +141,34 @@
             this.cb_Departamento.Size = new System.Drawing.Size(151, 21);
             this.cb_Departamento.TabIndex = 5;
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(354, 409);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aceptar.TabIndex = 6;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // btn_recibo
+            // 
+            this.btn_recibo.Location = new System.Drawing.Point(633, 151);
+            this.btn_recibo.Name = "btn_recibo";
+            this.btn_recibo.Size = new System.Drawing.Size(144, 26);
+            this.btn_recibo.TabIndex = 6;
+            this.btn_recibo.Text = "Generar recibo";
+            this.btn_recibo.UseVisualStyleBackColor = true;
+            this.btn_recibo.Click += new System.EventHandler(this.btn_recibo_Click);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Dgv_inventario);
+            this.Controls.Add(this.btn_aceptar);
+            this.Controls.Add(this.btn_recibo);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.cb_merma);
             this.Controls.Add(this.cb_Departamento);
@@ -176,5 +200,7 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.DataGridView Dgv_inventario;
         private System.Windows.Forms.ComboBox cb_Departamento;
+        private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.Button btn_recibo;
     }
 }

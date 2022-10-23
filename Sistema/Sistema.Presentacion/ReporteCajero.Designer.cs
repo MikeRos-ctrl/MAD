@@ -40,13 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rCajero)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(350, 413);
+            this.btn_buscar.Location = new System.Drawing.Point(353, 117);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 18;
@@ -154,11 +155,22 @@
             this.label1.Text = "Reporte de cajero";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(353, 413);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aceptar.TabIndex = 18;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // ReporteCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.Dgv_rCajero);
             this.Controls.Add(this.cb_Cajero);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }

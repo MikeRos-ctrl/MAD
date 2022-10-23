@@ -31,15 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtp_fInicio = new System.Windows.Forms.DateTimePicker();
             this.dtp_fFin = new System.Windows.Forms.DateTimePicker();
+            this.dtp_fInicio = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.cb_Departamento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cb_Caja = new System.Windows.Forms.ComboBox();
             this.Dgv_rVentas = new System.Windows.Forms.DataGridView();
             this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rVentas)).BeginInit();
             this.SuspendLayout();
@@ -79,15 +80,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rango de fechas";
             // 
-            // label3
+            // dtp_fFin
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Inicio";
-            this.label3.Click += new System.EventHandler(this.label2_Click);
+            this.dtp_fFin.Location = new System.Drawing.Point(6, 79);
+            this.dtp_fFin.Name = "dtp_fFin";
+            this.dtp_fFin.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fFin.TabIndex = 6;
+            // 
+            // dtp_fInicio
+            // 
+            this.dtp_fInicio.Location = new System.Drawing.Point(6, 40);
+            this.dtp_fInicio.Name = "dtp_fInicio";
+            this.dtp_fInicio.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fInicio.TabIndex = 6;
             // 
             // label4
             // 
@@ -99,19 +104,15 @@
             this.label4.Text = "Fin";
             this.label4.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dtp_fInicio
+            // label3
             // 
-            this.dtp_fInicio.Location = new System.Drawing.Point(6, 40);
-            this.dtp_fInicio.Name = "dtp_fInicio";
-            this.dtp_fInicio.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fInicio.TabIndex = 6;
-            // 
-            // dtp_fFin
-            // 
-            this.dtp_fFin.Location = new System.Drawing.Point(6, 79);
-            this.dtp_fFin.Name = "dtp_fFin";
-            this.dtp_fFin.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fFin.TabIndex = 6;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Inicio";
+            this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
             // cb_Departamento
             // 
@@ -157,11 +158,22 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(343, 406);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aceptar.TabIndex = 19;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // ReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.Dgv_rVentas);
             this.Controls.Add(this.cb_Caja);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.ComboBox cb_Caja;
         private System.Windows.Forms.DataGridView Dgv_rVentas;
         private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }
