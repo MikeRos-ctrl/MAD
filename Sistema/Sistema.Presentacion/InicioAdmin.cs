@@ -71,5 +71,12 @@ namespace Sistema.Presentacion
             xd.Show();
         }
 
+        private void btn_verCajero_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VerCajero xd = new VerCajero();
+            xd.Show();
+        }
+
     }
 }

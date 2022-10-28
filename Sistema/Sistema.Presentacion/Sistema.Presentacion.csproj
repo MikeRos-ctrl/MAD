@@ -95,6 +95,12 @@
     <Compile Include="LoginCajero.Designer.cs">
       <DependentUpon>LoginCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCajero.Designer.cs">
+      <DependentUpon>ModificarCajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     <Compile Include="ReporteVentas.Designer.cs">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerCajero.Designer.cs">
+      <DependentUpon>VerCajero.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador_Management.resx">
       <DependentUpon>Administrador_Management.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginCajero.resx">
       <DependentUpon>LoginCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCajero.resx">
+      <DependentUpon>ModificarCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>
@@ -175,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteVentas.resx">
       <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerCajero.resx">
+      <DependentUpon>VerCajero.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
