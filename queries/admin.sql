@@ -19,6 +19,7 @@ VALUES('clave', 'mike', 'curpdx', '21/08/22', '21/08/22','12345678966');
 INSERT INTO data_admin(clave,nombre,curp,fecha_nacimiento,fecha_ingreso,nomina)
 VALUES('qwer', 'moller', 'mollercurp', '21/08/98', 'ayer ingresoxd','tr7fedcr');
 
+
 -- ---------------------------------------------------------------------------------------------------------------------
 create table login_admin(
 	clave varchar(250) not null,
@@ -30,12 +31,13 @@ create table login_admin(
 
 select * from login_admin;
 drop table login_admin;
+DELETE FROM login_admin WHERE correo = 'moller@hotmail.com';
 
 INSERT INTO login_admin (clave, correo, contra)
 VALUES ('clave', 'mike@hotmail.com', 'mikexd');
 
 INSERT INTO login_admin (clave, correo, contra)
-VALUES ('qwer', 'moller@hotmail.com', 'mollerxd');
+VALUES ('clave', 'moller@hotmail.com', 'mollerxd');
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,7 +48,7 @@ VALUES ('qwer', 'moller@hotmail.com', 'mollerxd');
 create proc Get_Admin
 as
 select 
-n.clave,
+d.clave,
 d.nombre,
 d.curp,
 d.fecha_nacimiento,
@@ -55,26 +57,37 @@ d.nomina,
 l.status_,
 l.correo,
 l.contra
-from new_admin n
-inner join data_admin d
-on n.clave = d.clave
+from data_admin d
 inner join login_admin l 
-on n.clave = l.clave
+on d.clave = l.clave
 order by d.fecha_ingreso asc
 go
 exec Get_Admin;
 
+select clave from Get_Admin
 
 --Login_Administrador
 
 create proc Login_Administrador
-@correo varchar (50)
+@Correo varchar (50)
 as
-select contra
+select contra,
+	   clave
 from  login_admin
-where  correo=@correo
+where  correo=@Correo
 go
 
 exec Login_Administrador 'moller@hotmail.comx'
 
 
+-- clave de admin
+select * from Clave_Admin
+
+
+create proc Clave_Admin
+as
+select 
+from  login_admin
+go
+
+exec Clave_Admin 
