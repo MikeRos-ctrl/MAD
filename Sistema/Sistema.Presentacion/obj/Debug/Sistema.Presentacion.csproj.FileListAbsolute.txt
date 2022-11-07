@@ -23,7 +23,6 @@ C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Negocio.pdb
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Datos.pdb
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csprojAssemblyReference.cache
-C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Administrador_Management.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Login.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Properties.Resources.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.csproj.GenerateResource.cache
@@ -64,12 +63,11 @@ D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Si
 D:\Uanl_Drive\OneDrive - Universidad Autonoma de Nuevo León\Repositorios\MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.pdb
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.dll
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Entidades.pdb
-C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.EditarProducto.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Producto.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ReporteCajero.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ReporteVentas.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ConsultaRecibo.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.InicioCajero.resources
-C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.LoginCajero.resources
-C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.ModificarCajero.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerCajero.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerProducto.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerModCajero.resources

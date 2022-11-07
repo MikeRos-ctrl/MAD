@@ -13,7 +13,6 @@ namespace Sistema.Entidades
         public string nombre { get; set; }
         public string curp { get; set; }
         public string fecha_nacimiento { get; set; }
-        public string fecha_ingreso { get; set; }
         public string nomina { get; set; }
         public bool status { get; set; }
         public string correo { get; set; }

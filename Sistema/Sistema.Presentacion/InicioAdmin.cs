@@ -12,18 +12,17 @@ namespace Sistema.Presentacion
 {
     public partial class InicioAdmin : Form
     {
-        public InicioAdmin()
+
+        private string name = "";
+
+        public InicioAdmin(string Nombre)
         {
             InitializeComponent();
+            this.name = Nombre;
+
         }
 
 
-        private void btn_inventario_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Inventario xd = new Inventario();
-            xd.Show();
-        }
 
         private void InicioAdmin_Load(object sender, EventArgs e)
         {
@@ -31,10 +30,11 @@ namespace Sistema.Presentacion
         }
 
         private void btn_usurio_Click(object sender, EventArgs e)
-        {
+        { 
+
+            RegistroEmpleado who = new RegistroEmpleado(this.name);
+            who.Show();
             this.Hide();
-            RegistroEmpleado xd = new RegistroEmpleado();
-            xd.Show();
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
@@ -44,39 +44,46 @@ namespace Sistema.Presentacion
             xd.Show();
         }
 
-        private void btn_editar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            EditarProducto xd = new EditarProducto();
-            xd.Show();
-        }
 
         private void btn_rVentas_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ReporteVentas xd = new ReporteVentas();
+            ReporteVentas xd = new ReporteVentas(this.name);
+
             xd.Show();
+            this.Hide();
         }
 
         private void btn_rCajero_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ReporteCajero xd = new ReporteCajero();
+ 
+            ReporteCajero xd = new ReporteCajero(this.name);
             xd.Show();
-        }
-        private void btn_logusuario_Click(object sender, EventArgs e)
-        {
             this.Hide();
-            LoginCajero xd = new LoginCajero();
-            xd.Show();
         }
 
         private void btn_verCajero_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            VerCajero xd = new VerCajero();
+
+     
+            VerCajero xd = new VerCajero(this.name);
             xd.Show();
+            this.Hide();
+
         }
 
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+
+            Producto xd = new Producto(this.name);
+            xd.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -16,6 +16,7 @@ namespace Sistema.Presentacion
         {
             InitializeComponent();
         }
+ 
 
         private void btn_devoluciones_Click(object sender, EventArgs e)
         {
@@ -26,9 +27,10 @@ namespace Sistema.Presentacion
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InicioAdmin xd = new InicioAdmin();
+
+            Login xd = new Login();
             xd.Show();
+            this.Hide();
         }
 
         private void btn_inventario_Click(object sender, EventArgs e)

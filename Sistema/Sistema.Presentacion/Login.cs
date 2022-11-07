@@ -20,10 +20,15 @@ namespace Sistema.Presentacion
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
+
+
             string correo = txt_correo.Text;
             string contra = txt_contra.Text;
+            //string clave = .DataSource;
 
-            if(correo.CompareTo("")== 0 || contra.CompareTo("") == 0)
+           
+
+            if (correo.CompareTo("")== 0 || contra.CompareTo("") == 0)
             {
                 MessageBox.Show("faltan llenar campos -.-");
             }
@@ -32,6 +37,10 @@ namespace Sistema.Presentacion
             {
                 DataTable table = new DataTable();
                 table = N_Administrador.Login_Administrador(correo);
+                string clave = Convert.ToString(table.Rows[0][1]);
+                //RegistroEmpleado who = new RegistroEmpleado();
+                //who.registeredBy.Text = correo;
+
 
                 if (table.Rows.Count == 0)//usuario no existe
                 {
@@ -44,7 +53,7 @@ namespace Sistema.Presentacion
                     if (user_contra.CompareTo(contra) == 0)
                     {
                         MessageBox.Show("Todo esta bien y ingresar seccion");
-                        InicioAdmin frm = new InicioAdmin();
+                        InicioAdmin frm = new InicioAdmin(clave);   
                         frm.Show();
                         this.Hide();
                     }
@@ -56,7 +65,58 @@ namespace Sistema.Presentacion
             }
         }
 
+        private void btn_aceptarCajero_Click(object sender, EventArgs e)
+        {
+
+
+            string correo = txt_correoCajero.Text;
+            string contra = txt_contraCajero.Text;
+
+            if (correo.CompareTo("") == 0 || contra.CompareTo("") == 0)
+            {
+                MessageBox.Show("faltan llenar campos -.-");
+            }
+
+            else
+            {
+                DataTable table = new DataTable();
+                table = N_Cajero.Login_Cajeros(correo);
+
+                if (table.Rows.Count == 0)//usuario no existe
+                {
+                    MessageBox.Show("Usuario inexistente");
+                }
+                else
+                {
+                    string user_contra = Convert.ToString(table.Rows[0][0]);//contraseña
+
+                    if (user_contra.CompareTo(contra) == 0)
+                    {
+                        MessageBox.Show("Todo esta bien y ingresar seccion");
+
+                        InicioCajero xd = new InicioCajero();
+                        xd.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta xd");
+                    }
+                }
+            }
+
+        }
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_correo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

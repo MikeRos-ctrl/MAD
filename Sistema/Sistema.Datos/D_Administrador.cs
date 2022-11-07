@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Sistema.Datos
 {
     public class D_Administrador
     {
-        public DataTable Get_Administradores()
+        public DataTable Get_Administradores(string clave)
         {
             SqlDataReader Resultado;
             DataTable Table = new DataTable();
@@ -37,7 +38,7 @@ namespace Sistema.Datos
         }
 
 
-        public DataTable Login_Administador(string Correo)
+        public DataTable Login_Administador(string correo)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -47,7 +48,7 @@ namespace Sistema.Datos
                 SqlCon = Connection.Get_Instancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("Login_Administrador", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = Correo;
+                Comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = correo;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -63,6 +64,7 @@ namespace Sistema.Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
+        
 
     }
 }

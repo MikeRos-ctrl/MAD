@@ -66,7 +66,7 @@
             // 
             // btn_cerrar
             // 
-            this.btn_cerrar.Location = new System.Drawing.Point(538, 409);
+            this.btn_cerrar.Location = new System.Drawing.Point(650, 409);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(111, 27);
             this.btn_cerrar.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 448);
+            this.ClientSize = new System.Drawing.Size(773, 448);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.btn_consulta);
             this.Controls.Add(this.btn_inventario);
