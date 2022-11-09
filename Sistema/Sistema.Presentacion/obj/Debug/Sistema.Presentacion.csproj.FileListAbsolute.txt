@@ -71,3 +71,5 @@ C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerCajero.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerProducto.resources
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerModCajero.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.Departamento.resources
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Presentacion\obj\Debug\Sistema.Presentacion.VerModProducto.resources

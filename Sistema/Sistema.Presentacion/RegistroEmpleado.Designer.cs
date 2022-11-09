@@ -37,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.Contrasena = new System.Windows.Forms.TextBox();
             this.NomCompleto = new System.Windows.Forms.TextBox();
             this.CURP = new System.Windows.Forms.TextBox();
@@ -46,7 +45,8 @@
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.fNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.fIngreso = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.registeredBy = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +65,7 @@
             // 
             this.ClaveUsu.Location = new System.Drawing.Point(59, 101);
             this.ClaveUsu.Name = "ClaveUsu";
+            this.ClaveUsu.ReadOnly = true;
             this.ClaveUsu.Size = new System.Drawing.Size(167, 20);
             this.ClaveUsu.TabIndex = 1;
             this.ClaveUsu.TextChanged += new System.EventHandler(this.ClaveUsu_TextChanged);
@@ -111,7 +112,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(531, 131);
+            this.label6.Location = new System.Drawing.Point(531, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 2;
@@ -137,16 +138,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Correo";
             this.label8.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(531, 183);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 13);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Fecha de ingreso a la empresa";
-            this.label9.Click += new System.EventHandler(this.label3_Click);
             // 
             // Contrasena
             // 
@@ -210,33 +201,44 @@
             // 
             // fNacimiento
             // 
-            this.fNacimiento.Location = new System.Drawing.Point(530, 150);
+            this.fNacimiento.Location = new System.Drawing.Point(530, 173);
             this.fNacimiento.Name = "fNacimiento";
             this.fNacimiento.Size = new System.Drawing.Size(200, 20);
             this.fNacimiento.TabIndex = 5;
             this.fNacimiento.ValueChanged += new System.EventHandler(this.fNacimiento_ValueChanged);
             // 
-            // fIngreso
+            // label9
             // 
-            this.fIngreso.Location = new System.Drawing.Point(530, 199);
-            this.fIngreso.Name = "fIngreso";
-            this.fIngreso.Size = new System.Drawing.Size(200, 20);
-            this.fIngreso.TabIndex = 5;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(314, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Quien lo registra";
+            this.label9.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // registeredBy
+            // 
+            this.registeredBy.Location = new System.Drawing.Point(314, 101);
+            this.registeredBy.Name = "registeredBy";
+            this.registeredBy.ReadOnly = true;
+            this.registeredBy.Size = new System.Drawing.Size(167, 20);
+            this.registeredBy.TabIndex = 1;
+            this.registeredBy.TextChanged += new System.EventHandler(this.Contrasena_TextChanged);
             // 
             // RegistroEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 358);
-            this.Controls.Add(this.fIngreso);
             this.Controls.Add(this.fNacimiento);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -244,6 +246,7 @@
             this.Controls.Add(this.CURP);
             this.Controls.Add(this.nNomina);
             this.Controls.Add(this.NomCompleto);
+            this.Controls.Add(this.registeredBy);
             this.Controls.Add(this.Contrasena);
             this.Controls.Add(this.ClaveUsu);
             this.Controls.Add(this.label1);
@@ -265,7 +268,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ClaveUsu;
         private System.Windows.Forms.TextBox Contrasena;
         private System.Windows.Forms.TextBox NomCompleto;
@@ -275,6 +277,7 @@
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.DateTimePicker fNacimiento;
-        private System.Windows.Forms.DateTimePicker fIngreso;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox registeredBy;
     }
 }

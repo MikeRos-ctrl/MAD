@@ -79,6 +79,14 @@ namespace Sistema.Presentacion
             this.Hide();
         }
 
+        private void btn_GesDep_Click(object sender, EventArgs e)
+        {
+
+            Departamento xd = new Departamento(this.name);
+            xd.Show();
+            this.Hide();
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 

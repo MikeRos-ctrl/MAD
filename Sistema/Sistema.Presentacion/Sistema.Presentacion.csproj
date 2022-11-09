@@ -47,29 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador_Management.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador_Management.Designer.cs">
-      <DependentUpon>Administrador_Management.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConsultaRecibo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaRecibo.Designer.cs">
       <DependentUpon>ConsultaRecibo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Departamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departamento.Designer.cs">
+      <DependentUpon>Departamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Devueltos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Devueltos.Designer.cs">
       <DependentUpon>Devueltos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarProducto.Designer.cs">
-      <DependentUpon>EditarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioAdmin.cs">
       <SubType>Form</SubType>
@@ -88,18 +82,6 @@
     </Compile>
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginCajero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginCajero.Designer.cs">
-      <DependentUpon>LoginCajero.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarCajero.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarCajero.Designer.cs">
-      <DependentUpon>ModificarCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs">
       <SubType>Form</SubType>
@@ -139,17 +121,32 @@
     <Compile Include="VerCajero.Designer.cs">
       <DependentUpon>VerCajero.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Administrador_Management.resx">
-      <DependentUpon>Administrador_Management.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VerModCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerModCajero.Designer.cs">
+      <DependentUpon>VerModCajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerModProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerModProducto.Designer.cs">
+      <DependentUpon>VerModProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerProducto.Designer.cs">
+      <DependentUpon>VerProducto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConsultaRecibo.resx">
       <DependentUpon>ConsultaRecibo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Departamento.resx">
+      <DependentUpon>Departamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Devueltos.resx">
       <DependentUpon>Devueltos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditarProducto.resx">
-      <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioAdmin.resx">
       <DependentUpon>InicioAdmin.cs</DependentUpon>
@@ -159,12 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginCajero.resx">
-      <DependentUpon>LoginCajero.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCajero.resx">
-      <DependentUpon>ModificarCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>
@@ -193,6 +184,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerCajero.resx">
       <DependentUpon>VerCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerModCajero.resx">
+      <DependentUpon>VerModCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerModProducto.resx">
+      <DependentUpon>VerModProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerProducto.resx">
+      <DependentUpon>VerProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

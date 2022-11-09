@@ -12,9 +12,13 @@ namespace Sistema.Presentacion
 {
     public partial class ReporteCajero : Form
     {
-        public ReporteCajero()
+
+        string Nombre_Actual = "";
+
+        public ReporteCajero(string Nombre)
         {
             InitializeComponent();
+            Nombre_Actual = Nombre;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,9 +28,15 @@ namespace Sistema.Presentacion
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InicioAdmin xd = new InicioAdmin();
+
+            InicioAdmin xd = new InicioAdmin(Nombre_Actual);
             xd.Show();
+            this.Hide();
+        }
+
+        private void ReporteCajero_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

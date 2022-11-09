@@ -10,37 +10,26 @@ using System.Windows.Forms;
 
 namespace Sistema.Presentacion
 {
-    public partial class ReporteVentas : Form
+    public partial class VerProducto : Form
     {
-
         string Nombre_Actual = "";
 
-        public ReporteVentas(string Nombre)
+        public VerProducto(string Nombre)
         {
             InitializeComponent();
             Nombre_Actual = Nombre;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btn_Modificar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void btn_aceptar_Click(object sender, EventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
             InicioAdmin xd = new InicioAdmin(Nombre_Actual);
             xd.Show();
             this.Hide();
-
         }
-
-        private void labelReporteventa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
     }
 }

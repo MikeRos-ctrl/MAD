@@ -157,7 +157,7 @@
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(353, 413);
+            this.btn_aceptar.Location = new System.Drawing.Point(353, 427);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar.TabIndex = 18;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 462);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.Dgv_rCajero);
@@ -181,6 +181,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ReporteCajero";
             this.Text = "ReporteCajero";
+            this.Load += new System.EventHandler(this.ReporteCajero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rCajero)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

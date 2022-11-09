@@ -13,10 +13,18 @@ namespace Sistema.Presentacion
 {
     public partial class RegistroEmpleado : Form
     {
-        public RegistroEmpleado()
+
+        string Nombre_Actual = "";
+        string claveCajero = "";
+
+
+        public RegistroEmpleado(string Nombre)
         {
             InitializeComponent();
+            Nombre_Actual = Nombre;
         }
+
+     
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -48,42 +56,80 @@ namespace Sistema.Presentacion
 
         }
 
+
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
+
             string clave = ClaveUsu.Text;
+            string registered_by_ = registeredBy.Text;
             string Contrasena_ = Contrasena.Text;
             string NomCompleto_ = NomCompleto.Text;
             string CURP_ = CURP.Text;
             string nNomina_ = nNomina.Text;
             string Correo_ = Correo.Text;
             string nacimiento = fNacimiento.Text;
-            string ingreso = fIngreso.Text;
 
-            string respuesta = N_Cajero.Insert_Cajero(clave,"moller",NomCompleto_,
-                CURP_,nacimiento,ingreso,nNomina_,Correo_,Contrasena_);
 
-            if (respuesta.Equals("OK"))
+            if (clave.CompareTo("") == 0 || registered_by_.CompareTo("") == 0 || Contrasena_.CompareTo("") == 0 
+                || NomCompleto_.CompareTo("") == 0 || CURP_.CompareTo("") == 0 || nNomina_.CompareTo("") == 0
+                || Correo_.CompareTo("") == 0 || nacimiento.CompareTo("") == 0)
             {
-                MessageBox.Show("Nuevo Registro Insertado c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              
+                MessageBox.Show("Datos vacios -.-", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                string respuesta = N_Cajero.sp_GestionarCajero(clave, registered_by_, NomCompleto_,
+                    CURP_, nacimiento, nNomina_, Correo_, Contrasena_, "I");
 
+                if (respuesta.Equals("OK"))
+                {
+                    MessageBox.Show("Nuevo Registro Insertado c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InicioAdmin frm = new InicioAdmin(registered_by_);
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void RegistroEmpleado_Load(object sender, EventArgs e)
         {
 
+            registeredBy.AppendText(Nombre_Actual);
+            claveCajero = Guid.NewGuid().ToString("N").Substring(0, 6);
+            ClaveUsu.AppendText(claveCajero);
+            
+
+            //string clave = registeredBy.Text;
+
+            //try
+            //{
+            //    DataTable Tabla = new DataTable();
+            //    Tabla = N_Administrador.Get_Administradores(clave);
+            //    string registered_by_ = Convert.ToString(Tabla.Rows[0][0]);
+            //}
+            //catch (Exception ex)
+            //{
+
+
+            //    MessageBox.Show(ex.Message + ex.StackTrace);
+            //}
+
+            //string registered_by_ = registeredBy.Row[fila].Cells[0].Value.ToString();
+            //registeredBy.DataSource = N_Administrador.Login_Administrador(registered_by_).Rows[1].ToString();
+
+
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            InicioAdmin xd = new InicioAdmin();
+           
+            InicioAdmin xd = new InicioAdmin(Nombre_Actual);
             xd.Show();
+            this.Hide();
         }
     }
 }

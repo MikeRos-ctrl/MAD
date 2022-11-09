@@ -36,7 +36,7 @@ namespace Sistema.Presentacion
             else
             {
                 DataTable table = new DataTable();
-                table = N_Administrador.Login_Administrador(correo);
+                table = N_Administrador.Login_Administador(correo);
                 string clave = Convert.ToString(table.Rows[0][1]);
                 //RegistroEmpleado who = new RegistroEmpleado();
                 //who.registeredBy.Text = correo;
@@ -80,7 +80,7 @@ namespace Sistema.Presentacion
             else
             {
                 DataTable table = new DataTable();
-                table = N_Cajero.Login_Cajeros(correo);
+                table = N_Cajero.sp_Login_Cajeros(correo);
 
                 if (table.Rows.Count == 0)//usuario no existe
                 {
@@ -117,6 +117,11 @@ namespace Sistema.Presentacion
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

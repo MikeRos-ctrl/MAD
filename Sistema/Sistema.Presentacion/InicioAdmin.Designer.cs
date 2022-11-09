@@ -34,6 +34,7 @@
             this.btn_rCajero = new System.Windows.Forms.Button();
             this.btn_verCajero = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
+            this.btn_GesDep = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_usurio
@@ -48,7 +49,7 @@
             // 
             // btn_rVentas
             // 
-            this.btn_rVentas.Location = new System.Drawing.Point(15, 227);
+            this.btn_rVentas.Location = new System.Drawing.Point(12, 266);
             this.btn_rVentas.Name = "btn_rVentas";
             this.btn_rVentas.Size = new System.Drawing.Size(139, 27);
             this.btn_rVentas.TabIndex = 0;
@@ -68,7 +69,7 @@
             // 
             // btn_rCajero
             // 
-            this.btn_rCajero.Location = new System.Drawing.Point(15, 273);
+            this.btn_rCajero.Location = new System.Drawing.Point(12, 312);
             this.btn_rCajero.Name = "btn_rCajero";
             this.btn_rCajero.Size = new System.Drawing.Size(139, 27);
             this.btn_rCajero.TabIndex = 0;
@@ -78,23 +79,33 @@
             // 
             // btn_verCajero
             // 
-            this.btn_verCajero.Location = new System.Drawing.Point(26, 21);
+            this.btn_verCajero.Location = new System.Drawing.Point(21, 21);
             this.btn_verCajero.Name = "btn_verCajero";
             this.btn_verCajero.Size = new System.Drawing.Size(111, 27);
             this.btn_verCajero.TabIndex = 0;
-            this.btn_verCajero.Text = "Ver Cajeros";
+            this.btn_verCajero.Text = "Gestionar Cajeros";
             this.btn_verCajero.UseVisualStyleBackColor = true;
             this.btn_verCajero.Click += new System.EventHandler(this.btn_verCajero_Click);
             // 
             // btn_productos
             // 
-            this.btn_productos.Location = new System.Drawing.Point(26, 181);
+            this.btn_productos.Location = new System.Drawing.Point(12, 220);
             this.btn_productos.Name = "btn_productos";
-            this.btn_productos.Size = new System.Drawing.Size(111, 27);
+            this.btn_productos.Size = new System.Drawing.Size(139, 27);
             this.btn_productos.TabIndex = 0;
-            this.btn_productos.Text = "Productos";
+            this.btn_productos.Text = "Gestionar Productos";
             this.btn_productos.UseVisualStyleBackColor = true;
             this.btn_productos.Click += new System.EventHandler(this.btn_productos_Click);
+            // 
+            // btn_GesDep
+            // 
+            this.btn_GesDep.Location = new System.Drawing.Point(12, 178);
+            this.btn_GesDep.Name = "btn_GesDep";
+            this.btn_GesDep.Size = new System.Drawing.Size(139, 27);
+            this.btn_GesDep.TabIndex = 0;
+            this.btn_GesDep.Text = "Gestionar Departamento";
+            this.btn_GesDep.UseVisualStyleBackColor = true;
+            this.btn_GesDep.Click += new System.EventHandler(this.btn_GesDep_Click);
             // 
             // InicioAdmin
             // 
@@ -104,6 +115,7 @@
             this.Controls.Add(this.btn_rCajero);
             this.Controls.Add(this.btn_rVentas);
             this.Controls.Add(this.btn_cerrar);
+            this.Controls.Add(this.btn_GesDep);
             this.Controls.Add(this.btn_productos);
             this.Controls.Add(this.btn_verCajero);
             this.Controls.Add(this.btn_usurio);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btn_rCajero;
         private System.Windows.Forms.Button btn_verCajero;
         private System.Windows.Forms.Button btn_productos;
+        private System.Windows.Forms.Button btn_GesDep;
     }
 }
