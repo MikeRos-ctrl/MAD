@@ -45,7 +45,7 @@ VALUES ('clave', 'moller@hotmail.com', 'mollerxd');
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Get_Admin
-create proc Get_Admin
+create proc sp_Get_Admin
 as
 select 
 d.clave,
@@ -68,7 +68,7 @@ select clave from Get_Admin
 
 --Login_Administrador
 
-create proc Login_Administrador
+create proc sp_Login_Administrador
 @Correo varchar (50)
 as
 select contra,
@@ -79,15 +79,3 @@ go
 
 exec Login_Administrador 'moller@hotmail.comx'
 
-
--- clave de admin
-select * from Clave_Admin
-
-
-create proc Clave_Admin
-as
-select 
-from  login_admin
-go
-
-exec Clave_Admin 
