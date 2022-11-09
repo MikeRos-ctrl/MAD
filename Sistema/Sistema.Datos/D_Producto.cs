@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace Sistema.Datos
 {
-    public class D_Cajero
+    public class D_Producto
     {
 
-
-        public DataTable sp_Get_Cajero()
+        public DataTable sp_Get_Producto()
         {
             SqlDataReader Resultado;
             DataTable Table = new DataTable();
@@ -22,7 +21,7 @@ namespace Sistema.Datos
             try
             {
                 SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("sp_Get_Cajero", SqlCon);
+                SqlCommand Comando = new SqlCommand("sp_Get_Producto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -39,50 +38,24 @@ namespace Sistema.Datos
             }
         }
 
-        public DataTable sp_Login_Cajeros(string Correo)
-        {
-            SqlDataReader Resultado;
-            DataTable Tabla = new DataTable();
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("sp_Login_Cajeros", SqlCon);
-                Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = Correo;
-                SqlCon.Open();
-                Resultado = Comando.ExecuteReader();
-                Tabla.Load(Resultado);
-                return Tabla;
-            }
-            catch (Exception ex)
-            {
-                return null;
-                throw ex;
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
-            }
-        }
-
-        public string sp_GestionarCajero(Cajero Obj)
+        public string sp_GestionarProducto(Producto Obj)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("sp_GestionarCajero", SqlCon);
+                SqlCommand Comando = new SqlCommand("sp_GestionarProducto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@clave", SqlDbType.VarChar).Value = Obj.clave;
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = Obj.codigo;
                 Comando.Parameters.Add("@registered_by", SqlDbType.VarChar).Value = Obj.registered_by;
-                Comando.Parameters.Add("@nombre", SqlDbType.VarChar).Value = Obj.nombre;
-                Comando.Parameters.Add("@curp", SqlDbType.VarChar).Value = Obj.curp;
-                Comando.Parameters.Add("@fecha_nacimiento", SqlDbType.VarChar).Value = Obj.fecha_nacimiento;
-                Comando.Parameters.Add("@nomina", SqlDbType.VarChar).Value = Obj.nomina;
-                Comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = Obj.correo;
-                Comando.Parameters.Add("@contra", SqlDbType.VarChar).Value = Obj.contra;
+                Comando.Parameters.Add("@departamento", SqlDbType.VarChar).Value = Obj.departamento;
+                Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Obj.descripcion;
+                Comando.Parameters.Add("@precio_unitario", SqlDbType.Float).Value = Obj.precio_unitario;
+                Comando.Parameters.Add("@unidad_de_medida", SqlDbType.VarChar).Value = Obj.unidad_de_medida;
+                Comando.Parameters.Add("@costo", SqlDbType.Float).Value = Obj.costo;
+                Comando.Parameters.Add("@existencia", SqlDbType.Int).Value = Obj.existencia;
+                Comando.Parameters.Add("@punto_de_reorden", SqlDbType.Int).Value = Obj.punto_de_reorden;
                 Comando.Parameters.Add("@Op", SqlDbType.Char).Value = Obj.Op;
                 SqlCon.Open();
                 //Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar el registro";
@@ -102,8 +75,7 @@ namespace Sistema.Datos
         }
 
 
-
-        public DataTable sp_Get_ModCajero()
+        public DataTable sp_Get_ModProducto()
         {
             SqlDataReader Resultado;
             DataTable Table = new DataTable();
@@ -112,7 +84,7 @@ namespace Sistema.Datos
             try
             {
                 SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("sp_Get_ModCajero", SqlCon);
+                SqlCommand Comando = new SqlCommand("sp_Get_ModProducto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -130,4 +102,6 @@ namespace Sistema.Datos
         }
 
     }
+
 }
+

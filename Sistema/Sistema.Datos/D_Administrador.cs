@@ -20,7 +20,7 @@ namespace Sistema.Datos
             try
             {
                 SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("Get_Admin", SqlCon);
+                SqlCommand Comando = new SqlCommand("sp_Get_Admin", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -46,7 +46,7 @@ namespace Sistema.Datos
             try
             {
                 SqlCon = Connection.Get_Instancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("Login_Administrador", SqlCon);
+                SqlCommand Comando = new SqlCommand("sp_Login_Administrador", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@correo", SqlDbType.VarChar).Value = correo;
                 SqlCon.Open();

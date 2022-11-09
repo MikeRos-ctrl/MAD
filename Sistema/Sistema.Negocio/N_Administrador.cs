@@ -17,7 +17,7 @@ namespace Sistema.Negocio
             return admin.Get_Administradores(clave);
         }
 
-        public static DataTable Login_Administrador(string correo)
+        public static DataTable Login_Administador(string correo)
         {
             D_Administrador Datos = new D_Administrador();
             return Datos.Login_Administador(correo);

@@ -17,5 +17,6 @@ namespace Sistema.Entidades
         public bool status { get; set; }
         public string correo { get; set; }
         public string contra { get; set; }
+        public string Op { get; set; }
     }
 }

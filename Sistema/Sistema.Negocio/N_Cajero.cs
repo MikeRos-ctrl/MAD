@@ -14,20 +14,14 @@ namespace Sistema.Negocio
 
        
 
-        public static DataTable Login_Cajeros(string correo)
+        public static DataTable sp_Login_Cajeros(string correo)
         {
             D_Cajero Datos = new D_Cajero();
-            return Datos.Login_Cajeros(correo);
+            return Datos.sp_Login_Cajeros(correo);
         }
 
-        public static string Eliminar_Cajero (string clave)
-        {
-            D_Cajero xd= new D_Cajero();
-            return xd.Eliminar_Cajero(clave);
-        }
-
-        public static string Insert_Cajero(string clave, string registered_by,string nombre,string curp,
-            string fecha_nacimiento,string nomina,string correo,string contra)
+        public static string sp_GestionarCajero(string clave, string registered_by,string nombre,string curp,
+            string fecha_nacimiento,string nomina,string correo,string contra, string Op)
         {
             D_Cajero admin = new D_Cajero();
             Cajero Obj = new Cajero();
@@ -39,37 +33,21 @@ namespace Sistema.Negocio
             Obj.nomina = nomina;
             Obj.correo = correo;
             Obj.contra = contra;
+            Obj.Op = Op;
 
-            return admin.Insert_Cajero(Obj);
+            return admin.sp_GestionarCajero(Obj);
         }
 
-        public static DataTable Get_Cajero()
+        public static DataTable sp_Get_Cajero()
         {
             D_Cajero admin = new D_Cajero();
-            return admin.Get_Cajero();
+            return admin.sp_Get_Cajero();
         }
 
-        public static string Update_Cajero(string clave, string nombre,string curp,
-              string fecha_nacimiento, string nomina, string correo, string contra)
+        public static DataTable sp_Get_ModCajero()
         {
             D_Cajero admin = new D_Cajero();
-            Cajero Obj = new Cajero();
-            Obj.clave = clave;
-            Obj.nombre = nombre;
-            Obj.curp = curp;
-            Obj.fecha_nacimiento = fecha_nacimiento;
-            Obj.nomina = nomina;
-            Obj.correo = correo;
-            Obj.contra = contra;
-
-
-            return admin.Update_Cajero(Obj);
-        }
-
-        public static DataTable Get_ModCajero()
-        {
-            D_Cajero admin = new D_Cajero();
-            return admin.Get_ModCajero();
+            return admin.sp_Get_ModCajero();
         }
     }
 }

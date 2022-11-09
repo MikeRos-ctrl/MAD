@@ -45,6 +45,8 @@
     <Compile Include="Connection.cs" />
     <Compile Include="D_Cajero.cs" />
     <Compile Include="D_Administrador.cs" />
+    <Compile Include="D_Departamento.cs" />
+    <Compile Include="D_Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
