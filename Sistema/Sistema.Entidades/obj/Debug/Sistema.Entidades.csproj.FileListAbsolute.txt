@@ -16,3 +16,7 @@ C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\De
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.dll
 C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.pdb
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\bin\Debug\Aspose.PDF.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\bin\Debug\Aspose.PDF.xml
+C:\Users\daren\OneDrive\Escritorio\Proyecto MAD\Sistema\Sistema.Entidades\obj\Debug\Sistema.Entidades.csproj.CopyComplete
