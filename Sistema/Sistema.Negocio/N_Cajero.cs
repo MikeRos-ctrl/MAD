@@ -12,7 +12,6 @@ namespace Sistema.Negocio
     public class N_Cajero
     {
 
-       
 
         public static DataTable sp_Login_Cajeros(string correo)
         {
