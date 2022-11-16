@@ -15,7 +15,7 @@ select * from data_admin;
 drop table data_admin;
 
 INSERT INTO data_admin(clave,nombre,curp,fecha_nacimiento,fecha_ingreso,nomina)
-VALUES('clave', 'mike', 'curpdx', '21/08/22', '21/08/22','12345678966');
+VALUES('Admin1', 'David', 'Davidcurpd', '21/08/22', '21/08/22','12345678966');
 INSERT INTO data_admin(clave,nombre,curp,fecha_nacimiento,fecha_ingreso,nomina)
 VALUES('qwer', 'moller', 'mollercurp', '21/08/98', 'ayer ingresoxd','tr7fedcr');
 
@@ -29,12 +29,12 @@ create table login_admin(
     foreign key (clave) references data_admin(clave)
 );
 
-select * from login_admin;
+select correo, contra from login_admin;
 drop table login_admin;
 DELETE FROM login_admin WHERE correo = 'moller@hotmail.com';
 
 INSERT INTO login_admin (clave, correo, contra)
-VALUES ('clave', 'mike@hotmail.com', 'mikexd');
+VALUES ('Admin1', 'David28', '123');
 
 INSERT INTO login_admin (clave, correo, contra)
 VALUES ('clave', 'moller@hotmail.com', 'mollerxd');
@@ -77,5 +77,5 @@ from  login_admin
 where  correo=@Correo
 go
 
-exec Login_Administrador 'moller@hotmail.comx'
+exec sp_Login_Administrador 'mike@hotmail.com'
 

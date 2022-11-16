@@ -9,10 +9,11 @@ create table data_cajero(
 	foreign key (registered_by) references data_admin(clave)
 );
 
-INSERT INTO `Dmarket`.`data_cajero`(`clave`,`nombre`,`curp`,`fecha_nacimiento`,`fecha_ingreso`,`nomina`)
-VALUES('clave_Cajero_1', 'alan', 'alancurp', '21/08/22', '21/08/22','123456781234966');
+INSERT INTO data_cajero(clave,registered_by, nombre,curp,fecha_nacimiento,nomina)
+VALUES('1','Admin1', 'alan', 'alancurp', '21/08/22','123456781234966');
 select * from data_cajero;
 drop table data_cajero;
+delete from data_cajero where clave = '0x32a0'
 
 -- ---------------------------------------------------------------------------------------------------------------------
 create table login_cajero(
@@ -23,8 +24,8 @@ create table login_cajero(
     foreign key (clave) references data_cajero(clave)
 );
 
-INSERT INTO `mad`.`login_admin` (`clave`, `correo`, `contra`)
-VALUES ('qwer', 'david@hotmail.com', 'davidxd');
+INSERT INTO login_admin (clave, correo, contra)
+VALUES ('1', 'david@hotmail.com', 'davidxd');
 
 select * from login_cajero;
 drop table login_cajero;
@@ -43,11 +44,16 @@ select * from cajero_modifications
 delete from cajero_modifications where by_who = 'clave';
 drop table cajero_modifications;
 
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------PROCEDIMIENTOS-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Gestionar Cajero
+If OBJECT_ID ('sp_GestionarCajero') is not null
+	Drop procedure sp_GestionarCajero;
+go
 create proc sp_GestionarCajero
 (
 @Op							   CHAR(1),
@@ -82,9 +88,24 @@ Begin
 
 	IF @Op = 'D' --delete
 	Begin
-		delete from login_cajero  where clave = @clave
+		delete from login_cajero where clave = @clave
 		delete from data_cajero  where clave = @clave
 	End
+
+   IF @Op = 'B' --baja lógica
+   BEGIN
+      UPDATE login_cajero 
+         SET 
+	           status_ = 0
+		 WHERE clave = @clave
+   END
+
+       IF @Op = 'F' --update fecha de nacimiento
+	Begin
+		update data_cajero set fecha_nacimiento = @fecha_nacimiento
+		where clave = @clave
+	End
+
 
 End;
 go
@@ -92,31 +113,55 @@ go
 exec Insert_Cajero 'asda', 'moller', 'panchito', 'panchocurp', '01/04/993', 'nomina123','pancho@gmail.com','12345';
 exec Get_Cajero
 
+-- Get Cajero 
+If OBJECT_ID ('sp_Get_Cajero') is not null
+	Drop procedure sp_Get_Cajero;
+go
 
 create proc sp_Get_Cajero
 as
 select 
-d.clave,
-d.registered_by,
-d.nombre,
-d.register_date,
-d.curp,
-d.fecha_nacimiento,
-d.nomina,
-l.correo,
-l.contra
-from data_cajero d
-inner join login_cajero l
-on d.clave = l.clave
-order by d.register_date asc
+[Codigo de Cajero],
+[Quien lo Registra],
+[Cajero],
+[Fecha de Registro],
+[CURP],
+[Fecha de Nacimiento],
+[Numero de Nomina],
+[Correo],
+[Contraseña]
+from vw_GetCajero 
+order by [Fecha de Registro] asc
+go
+
+--View Cajero
+CREATE VIEW vw_GetCajero AS 
+select  d.clave as 'Codigo de Cajero',
+		d.registered_by as 'Quien lo Registra',
+		d.nombre as 'Cajero',
+		d.register_date as 'Fecha de Registro',
+		d.curp as 'CURP',
+		d.fecha_nacimiento as 'Fecha de Nacimiento',
+		d.nomina as 'Numero de Nomina',
+		l.correo as 'Correo',
+		l.contra as 'Contraseña'
+	from data_cajero d
+	inner join login_cajero l
+	on d.clave = l.clave
 go
 
 --Login_Cajero
+If OBJECT_ID ('sp_Login_Cajeros') is not null
+	Drop procedure sp_Login_Cajeros;
+go
 
 create proc sp_Login_Cajeros
 @correo varchar (50)
 as
-select contra
+select contra,
+	   correo,
+	   clave
+
 from  login_cajero
 where  correo=@correo
 go
@@ -152,8 +197,6 @@ If OBJECT_ID ('trg_cajeroMod_Update') is not null
 	Drop Trigger trg_cajeroMod_Update;
 go
 
-drop trg_cajeroMod_Update
-go
 Create Trigger trg_cajeroMod_Update
 on data_cajero 
 After update
@@ -173,10 +216,6 @@ insert into cajero_modifications (clave_cajero, by_who, what) values (@clave_caj
 
 select clave_cajero, by_who, what from cajero_modifications
 end
-
-insert into cajero_modifications(by_who, clave_cajero, what) values ('clave','clave del morre3','sii');
-exec Update_Cajero 'clave del morre3', 'mariana', 'marianacurp', '24/10/1998', '43424322', 'aaaa', '1234'
-go
 
 --- trigger Delete
 If OBJECT_ID ('trg_cajeroMod_Delete') is not null
@@ -224,14 +263,32 @@ delete from cajero_modifications where by_who = 'clave';
 --end
 --go
 
+If OBJECT_ID ('sp_Get_ModCajero') is not null
+	Drop procedure sp_Get_ModCajero;
+go
+
 create proc sp_Get_ModCajero
 as
 select 
-by_who,
-clave_cajero,
-last_modification,
-what
+[Codigo de Cajero],
+[Quien lo Registra],
+[Cambios],
+[Ultimo Registro]
 
-from cajero_modifications
-order by last_modification asc
+from vw_Get_ModCajero
+order by [Ultimo Registro] asc
+go
+
+
+If OBJECT_ID ('vw_Get_ModCajero') is not null
+	Drop View vw_Get_ModCajero;
+go
+
+CREATE VIEW vw_Get_ModCajero AS 
+select  clave_cajero as 'Codigo de Cajero',
+		by_who as 'Quien lo Registra',
+		what as 'Cambios',
+		last_modification as 'Ultimo Registro'
+		from cajero_modifications
+
 go
