@@ -15,7 +15,7 @@ namespace Sistema.Presentacion
     {
 
         string Nombre_Actual = "";
-        string freedom = "";
+ 
 
 
         public Departamento(string Nombre)
@@ -25,42 +25,42 @@ namespace Sistema.Presentacion
 
         }
 
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            string id_ = idDepa.Text;
-            string NomCompleto_ = Depa.Text;
-            string Registered_by_ = Registeredby.Text;
+        //private void btn_eliminar_Click(object sender, EventArgs e)
+        //{
+        //    string id_ = idDepa.Text;
+        //    string NomCompleto_ = Depa.Text;
+        //    string Registered_by_ = Registeredby.Text;
 
-            freedom = id_;
+        //    freedom = id_;
 
-            if (id_.CompareTo("") == 0 || NomCompleto_.CompareTo("") == 0)
-            {
-                MessageBox.Show("No ha selecionado ninguna casilla -.-", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                DialogResult Opcion;
-                Opcion = MessageBox.Show("Deseas eliminar el Cajero con el id " + "[" + freedom.ToString() + "]" + "?", "Atencion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+        //    if (id_.CompareTo("") == 0 || NomCompleto_.CompareTo("") == 0)
+        //    {
+        //        MessageBox.Show("No ha selecionado ninguna casilla -.-", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    else
+        //    {
+        //        DialogResult Opcion;
+        //        Opcion = MessageBox.Show("Deseas eliminar el Cajero con el id " + "[" + freedom.ToString() + "]" + "?", "Atencion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                if (Opcion == DialogResult.OK)
-                {
-                    string respuesta = N_Departamento.sp_GestionarDepartamentos(freedom, Registered_by_, NomCompleto_, "D");
-                    if (respuesta.Equals("OK"))
-                    {
-                        MessageBox.Show("Cajero Eliminado c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Departamento_Load(sender, e);
+        //        if (Opcion == DialogResult.OK)
+        //        {
+        //            string respuesta = N_Departamento.sp_GestionarDepartamentos(freedom, Registered_by_, NomCompleto_, "D");
+        //            if (respuesta.Equals("OK"))
+        //            {
+        //                MessageBox.Show("Cajero Eliminado c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                Departamento_Load(sender, e);
 
-                    }
+        //            }
 
-                    else
-                    {
-                        MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Departamento_Load(sender, e);
-                    }
-                }
-            }
+        //            else
+        //            {
+        //                MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                Departamento_Load(sender, e);
+        //            }
+        //        }
+        //    }
             
-        }
+        //}
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
@@ -159,6 +159,35 @@ namespace Sistema.Presentacion
 
         private void Dgv_rDepartamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void btn_bajalogica_Click(object sender, EventArgs e)
+        {
+            string id_ = idDepa.Text;
+            string NomCompleto_ = Depa.Text;
+            string Registered_by_ = Registeredby.Text;
+            if (id_.CompareTo("") == 0 || NomCompleto_.CompareTo("") == 0 || Registered_by_.CompareTo("") == 0)
+            {
+                MessageBox.Show("Faltan Datos -.-", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string respuesta = N_Departamento.sp_GestionarDepartamentos(id_, Registered_by_, NomCompleto_, "B");
+
+
+                if (respuesta.Equals("OK"))
+                {
+
+                    MessageBox.Show("Eliminación logica hecha", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Departamento_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Departamento_Load(sender, e);
+                }
+            }
+
         }
     }
 }

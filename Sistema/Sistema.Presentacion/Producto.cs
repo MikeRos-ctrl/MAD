@@ -50,8 +50,8 @@ namespace Sistema.Presentacion
 
 
             cbox_departamaneto.DataSource = N_Departamento.sp_Get_Departamentos();
-            cbox_departamaneto.ValueMember = "nombre";
-            cbox_departamaneto.DisplayMember = "nombre";
+            cbox_departamaneto.ValueMember = "Departamento";
+            cbox_departamaneto.DisplayMember = "Departamento";
 
             try
             {
@@ -68,9 +68,9 @@ namespace Sistema.Presentacion
         private void Dgv_rProducto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cProducto.Text = Dgv_rProducto.CurrentRow.Cells[0].Value.ToString();
-            Adminnom.Text = Dgv_rProducto.CurrentRow.Cells[1].Value.ToString();
-            cbox_departamaneto.Text = Dgv_rProducto.CurrentRow.Cells[2].Value.ToString();
-            Descripcion.Text = Dgv_rProducto.CurrentRow.Cells[3].Value.ToString();
+            Adminnom.Text = Dgv_rProducto.CurrentRow.Cells[2].Value.ToString();
+            cbox_departamaneto.Text = Dgv_rProducto.CurrentRow.Cells[3].Value.ToString();
+            Descripcion.Text = Dgv_rProducto.CurrentRow.Cells[1].Value.ToString();
             nub_PreUni.Text = Dgv_rProducto.CurrentRow.Cells[4].Value.ToString();
             uMedida.Text = Dgv_rProducto.CurrentRow.Cells[5].Value.ToString();
             nud_Costo.Text = Dgv_rProducto.CurrentRow.Cells[6].Value.ToString();
@@ -126,7 +126,44 @@ namespace Sistema.Presentacion
             else
             {
                 string respuesta = N_Producto.sp_GestionarProducto(Codigo_, Registered_by_, Departamento_, Descripcion_,
-                                                                   Pre_Uni_, Umedida_, Costo_, Existencia_, Preorden_, "U");
+                                                                   Pre_Uni_, Umedida_, Costo_, Convert.ToInt32(Existencia_), Preorden_, "U");
+
+                if (respuesta.Equals("OK"))
+                {
+                    MessageBox.Show("Datos Actualizados c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Inventario_Load(sender, e);
+
+                }
+                else
+                {
+                    MessageBox.Show(respuesta, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Inventario_Load(sender, e);
+                }
+
+            }
+        }
+
+        private void btn_bajalogica_Click(object sender, EventArgs e)
+        {
+            string Existencia_ = nud_Existencia.Text;
+            string Umedida_ = uMedida.Text;
+            string Costo_ = nud_Costo.Text;
+            string Pre_Uni_ = nub_PreUni.Text;
+            string Preorden_ = nub_pReorden.Text;
+            string Departamento_ = cbox_departamaneto.Text;
+            string Descripcion_ = Descripcion.Text;
+            string Departamento_Pro_ = cbox_departamaneto.Text;
+            string Registered_by_ = Adminnom.Text;
+            string Codigo_ = cProducto.Text;
+
+            if (Codigo_.CompareTo("") == 0)
+            {
+                MessageBox.Show("Faltan llenar datos -.-", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string respuesta = N_Producto.sp_GestionarProducto(Codigo_, Registered_by_, Departamento_, Descripcion_,
+                                                                   Pre_Uni_, Umedida_, Costo_, Convert.ToInt32(Existencia_), Preorden_, "B");
 
                 if (respuesta.Equals("OK"))
                 {
@@ -166,7 +203,7 @@ namespace Sistema.Presentacion
             else
             {
                 string respuesta = N_Producto.sp_GestionarProducto(Codigo_, Registered_by_, Departamento_, Descripcion_, 
-                                                                   Pre_Uni_, Umedida_, Costo_, Existencia_, Preorden_, "I");
+                                                                   Pre_Uni_, Umedida_, Costo_, Convert.ToInt32(Existencia_), Preorden_, "I");
 
                 if (respuesta.Equals("OK"))
                 {
@@ -217,7 +254,7 @@ namespace Sistema.Presentacion
                 if (Opcion == DialogResult.OK)
                 {
                     string respuesta = N_Producto.sp_GestionarProducto(freedom, Registered_by_, Departamento_, Descripcion_,
-                                                                   Pre_Uni_, Umedida_, Costo_, Existencia_, Preorden_, "D");
+                                                                   Pre_Uni_, Umedida_, Costo_, Convert.ToInt32(Existencia_), Preorden_, "D");
                     if (respuesta.Equals("OK"))
                     {
                         MessageBox.Show("Cajero Eliminado c:", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -254,6 +291,14 @@ namespace Sistema.Presentacion
             VerModProducto xd = new VerModProducto(Nombre_Actual);
             xd.Show();
             this.Hide();
+        }
+
+        private void dtn_gendescuento_Click(object sender, EventArgs e)
+        {
+            Descuentos xd = new Descuentos(Nombre_Actual);
+            xd.Show();
+            this.Hide();
+
         }
     }
 }

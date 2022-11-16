@@ -41,18 +41,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.btn_buscartodas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rCajero)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(353, 117);
+            this.btn_buscar.Location = new System.Drawing.Point(353, 131);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 18;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // Dgv_rCajero
             // 
@@ -94,7 +96,7 @@
             this.groupBox1.Controls.Add(this.dtp_fInicio);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(537, 53);
+            this.groupBox1.Location = new System.Drawing.Point(569, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(219, 110);
             this.groupBox1.TabIndex = 14;
@@ -165,12 +167,23 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // btn_buscartodas
+            // 
+            this.btn_buscartodas.Location = new System.Drawing.Point(345, 158);
+            this.btn_buscartodas.Name = "btn_buscartodas";
+            this.btn_buscartodas.Size = new System.Drawing.Size(93, 23);
+            this.btn_buscartodas.TabIndex = 18;
+            this.btn_buscartodas.Text = "Buscar Todas";
+            this.btn_buscartodas.UseVisualStyleBackColor = true;
+            this.btn_buscartodas.Click += new System.EventHandler(this.btn_buscartodas_Click);
+            // 
             // ReporteCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 462);
             this.Controls.Add(this.btn_aceptar);
+            this.Controls.Add(this.btn_buscartodas);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.Dgv_rCajero);
             this.Controls.Add(this.cb_Cajero);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.Button btn_buscartodas;
     }
 }

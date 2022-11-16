@@ -31,17 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Existencia = new System.Windows.Forms.TextBox();
-            this.cb_pAgotados = new System.Windows.Forms.ComboBox();
-            this.cb_merma = new System.Windows.Forms.ComboBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.Dgv_inventario = new System.Windows.Forms.DataGridView();
             this.cb_Departamento = new System.Windows.Forms.ComboBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.btn_recibo = new System.Windows.Forms.Button();
+            this.Agotados = new System.Windows.Forms.CheckBox();
+            this.merma = new System.Windows.Forms.CheckBox();
+            this.btn_buscartodas = new System.Windows.Forms.Button();
+            this.Existencia = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_inventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Existencia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,84 +58,45 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 74);
+            this.label2.Location = new System.Drawing.Point(29, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Departamento";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 120);
+            this.label3.Location = new System.Drawing.Point(13, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Existencia minima";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(263, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Productos agotados";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(263, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Con Merma";
-            // 
-            // Existencia
-            // 
-            this.Existencia.Location = new System.Drawing.Point(33, 136);
-            this.Existencia.Name = "Existencia";
-            this.Existencia.Size = new System.Drawing.Size(71, 20);
-            this.Existencia.TabIndex = 4;
-            // 
-            // cb_pAgotados
-            // 
-            this.cb_pAgotados.FormattingEnabled = true;
-            this.cb_pAgotados.Location = new System.Drawing.Point(266, 90);
-            this.cb_pAgotados.Name = "cb_pAgotados";
-            this.cb_pAgotados.Size = new System.Drawing.Size(58, 21);
-            this.cb_pAgotados.TabIndex = 5;
-            // 
-            // cb_merma
-            // 
-            this.cb_merma.FormattingEnabled = true;
-            this.cb_merma.Location = new System.Drawing.Point(266, 135);
-            this.cb_merma.Name = "cb_merma";
-            this.cb_merma.Size = new System.Drawing.Size(58, 21);
-            this.cb_merma.TabIndex = 5;
-            // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(444, 110);
+            this.btn_buscar.Location = new System.Drawing.Point(354, 72);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.Size = new System.Drawing.Size(75, 28);
             this.btn_buscar.TabIndex = 6;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // Dgv_inventario
             // 
             this.Dgv_inventario.AllowUserToAddRows = false;
             this.Dgv_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_inventario.Location = new System.Drawing.Point(12, 183);
+            this.Dgv_inventario.Location = new System.Drawing.Point(12, 132);
             this.Dgv_inventario.Name = "Dgv_inventario";
-            this.Dgv_inventario.Size = new System.Drawing.Size(776, 208);
+            this.Dgv_inventario.Size = new System.Drawing.Size(776, 259);
             this.Dgv_inventario.TabIndex = 7;
             // 
             // cb_Departamento
             // 
             this.cb_Departamento.FormattingEnabled = true;
-            this.cb_Departamento.Location = new System.Drawing.Point(33, 90);
+            this.cb_Departamento.Location = new System.Drawing.Point(109, 62);
             this.cb_Departamento.Name = "cb_Departamento";
             this.cb_Departamento.Size = new System.Drawing.Size(151, 21);
             this.cb_Departamento.TabIndex = 5;
@@ -151,37 +111,64 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // btn_recibo
+            // Agotados
             // 
-            this.btn_recibo.Location = new System.Drawing.Point(633, 151);
-            this.btn_recibo.Name = "btn_recibo";
-            this.btn_recibo.Size = new System.Drawing.Size(144, 26);
-            this.btn_recibo.TabIndex = 6;
-            this.btn_recibo.Text = "Generar recibo";
-            this.btn_recibo.UseVisualStyleBackColor = true;
-            this.btn_recibo.Click += new System.EventHandler(this.btn_recibo_Click);
+            this.Agotados.AutoSize = true;
+            this.Agotados.Location = new System.Drawing.Point(644, 102);
+            this.Agotados.Name = "Agotados";
+            this.Agotados.Size = new System.Drawing.Size(144, 17);
+            this.Agotados.TabIndex = 8;
+            this.Agotados.Text = "Solo productos agotados";
+            this.Agotados.UseVisualStyleBackColor = true;
+            // 
+            // merma
+            // 
+            this.merma.AutoSize = true;
+            this.merma.Location = new System.Drawing.Point(644, 79);
+            this.merma.Name = "merma";
+            this.merma.Size = new System.Drawing.Size(79, 17);
+            this.merma.TabIndex = 9;
+            this.merma.Text = "Con merma";
+            this.merma.UseVisualStyleBackColor = true;
+            // 
+            // btn_buscartodas
+            // 
+            this.btn_buscartodas.Location = new System.Drawing.Point(344, 103);
+            this.btn_buscartodas.Name = "btn_buscartodas";
+            this.btn_buscartodas.Size = new System.Drawing.Size(93, 23);
+            this.btn_buscartodas.TabIndex = 19;
+            this.btn_buscartodas.Text = "Buscar Todas";
+            this.btn_buscartodas.UseVisualStyleBackColor = true;
+            this.btn_buscartodas.Click += new System.EventHandler(this.btn_buscartodas_Click);
+            // 
+            // Existencia
+            // 
+            this.Existencia.Location = new System.Drawing.Point(108, 93);
+            this.Existencia.Name = "Existencia";
+            this.Existencia.Size = new System.Drawing.Size(58, 20);
+            this.Existencia.TabIndex = 20;
             // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Existencia);
+            this.Controls.Add(this.btn_buscartodas);
+            this.Controls.Add(this.merma);
+            this.Controls.Add(this.Agotados);
             this.Controls.Add(this.Dgv_inventario);
             this.Controls.Add(this.btn_aceptar);
-            this.Controls.Add(this.btn_recibo);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.cb_merma);
             this.Controls.Add(this.cb_Departamento);
-            this.Controls.Add(this.cb_pAgotados);
-            this.Controls.Add(this.Existencia);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_inventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Existencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,15 +179,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Existencia;
-        private System.Windows.Forms.ComboBox cb_pAgotados;
-        private System.Windows.Forms.ComboBox cb_merma;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.DataGridView Dgv_inventario;
         private System.Windows.Forms.ComboBox cb_Departamento;
         private System.Windows.Forms.Button btn_aceptar;
-        private System.Windows.Forms.Button btn_recibo;
+        private System.Windows.Forms.CheckBox Agotados;
+        private System.Windows.Forms.CheckBox merma;
+        private System.Windows.Forms.Button btn_buscartodas;
+        private System.Windows.Forms.NumericUpDown Existencia;
     }
 }

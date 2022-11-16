@@ -33,7 +33,6 @@
             this.Depa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.idDepa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_limpiar = new System.Windows.Forms.Button();
+            this.btn_bajalogica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rDepartamento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,19 +94,9 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Location = new System.Drawing.Point(396, 403);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
-            this.btn_eliminar.TabIndex = 29;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(284, 403);
+            this.btn_Modificar.Location = new System.Drawing.Point(298, 403);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar.TabIndex = 30;
@@ -177,14 +167,24 @@
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
+            // btn_bajalogica
+            // 
+            this.btn_bajalogica.Location = new System.Drawing.Point(400, 403);
+            this.btn_bajalogica.Name = "btn_bajalogica";
+            this.btn_bajalogica.Size = new System.Drawing.Size(73, 23);
+            this.btn_bajalogica.TabIndex = 33;
+            this.btn_bajalogica.Text = "Eliminar";
+            this.btn_bajalogica.UseVisualStyleBackColor = true;
+            this.btn_bajalogica.Click += new System.EventHandler(this.btn_bajalogica_Click);
+            // 
             // Departamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 444);
+            this.Controls.Add(this.btn_bajalogica);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_aceptar);
@@ -210,7 +210,6 @@
         private System.Windows.Forms.TextBox Depa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_aceptar;
-        private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.TextBox idDepa;
         private System.Windows.Forms.Label label2;
@@ -220,5 +219,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_limpiar;
         public System.Windows.Forms.DataGridView Dgv_rDepartamento;
+        private System.Windows.Forms.Button btn_bajalogica;
     }
 }

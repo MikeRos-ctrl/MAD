@@ -54,6 +54,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Adminnom = new System.Windows.Forms.TextBox();
             this.btn_VerModCajero = new System.Windows.Forms.Button();
+            this.btn_bajalogica = new System.Windows.Forms.Button();
+            this.dtn_gendescuento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Costo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Existencia)).BeginInit();
@@ -183,7 +185,7 @@
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(1120, 331);
+            this.btn_aceptar.Location = new System.Drawing.Point(351, 371);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar.TabIndex = 22;
@@ -195,16 +197,16 @@
             // 
             this.Dgv_rProducto.AllowUserToAddRows = false;
             this.Dgv_rProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_rProducto.Location = new System.Drawing.Point(256, 95);
+            this.Dgv_rProducto.Location = new System.Drawing.Point(140, 95);
             this.Dgv_rProducto.Name = "Dgv_rProducto";
-            this.Dgv_rProducto.Size = new System.Drawing.Size(939, 217);
+            this.Dgv_rProducto.Size = new System.Drawing.Size(1055, 217);
             this.Dgv_rProducto.TabIndex = 23;
             this.Dgv_rProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_rProducto_CellClick);
             this.Dgv_rProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_rProducto_CellContentClick);
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(1120, 428);
+            this.btn_limpiar.Location = new System.Drawing.Point(455, 416);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
             this.btn_limpiar.TabIndex = 22;
@@ -224,6 +226,11 @@
             // nud_Costo
             // 
             this.nud_Costo.Location = new System.Drawing.Point(28, 193);
+            this.nud_Costo.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.nud_Costo.Name = "nud_Costo";
             this.nud_Costo.Size = new System.Drawing.Size(56, 20);
             this.nud_Costo.TabIndex = 25;
@@ -232,6 +239,11 @@
             // nud_Existencia
             // 
             this.nud_Existencia.Location = new System.Drawing.Point(28, 94);
+            this.nud_Existencia.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nud_Existencia.Name = "nud_Existencia";
             this.nud_Existencia.Size = new System.Drawing.Size(56, 20);
             this.nud_Existencia.TabIndex = 25;
@@ -240,6 +252,11 @@
             // nub_PreUni
             // 
             this.nub_PreUni.Location = new System.Drawing.Point(29, 242);
+            this.nub_PreUni.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.nub_PreUni.Name = "nub_PreUni";
             this.nub_PreUni.Size = new System.Drawing.Size(56, 20);
             this.nub_PreUni.TabIndex = 25;
@@ -247,7 +264,7 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(1120, 396);
+            this.btn_eliminar.Location = new System.Drawing.Point(351, 416);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminar.TabIndex = 31;
@@ -257,7 +274,7 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(1120, 364);
+            this.btn_Modificar.Location = new System.Drawing.Point(455, 371);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar.TabIndex = 32;
@@ -300,14 +317,36 @@
             this.btn_VerModCajero.UseVisualStyleBackColor = true;
             this.btn_VerModCajero.Click += new System.EventHandler(this.btn_VerModCajero_Click);
             // 
+            // btn_bajalogica
+            // 
+            this.btn_bajalogica.Location = new System.Drawing.Point(394, 462);
+            this.btn_bajalogica.Name = "btn_bajalogica";
+            this.btn_bajalogica.Size = new System.Drawing.Size(103, 23);
+            this.btn_bajalogica.TabIndex = 31;
+            this.btn_bajalogica.Text = "Eliminación logica";
+            this.btn_bajalogica.UseVisualStyleBackColor = true;
+            this.btn_bajalogica.Click += new System.EventHandler(this.btn_bajalogica_Click);
+            // 
+            // dtn_gendescuento
+            // 
+            this.dtn_gendescuento.Location = new System.Drawing.Point(1066, 326);
+            this.dtn_gendescuento.Name = "dtn_gendescuento";
+            this.dtn_gendescuento.Size = new System.Drawing.Size(129, 23);
+            this.dtn_gendescuento.TabIndex = 36;
+            this.dtn_gendescuento.Text = "Gestionar Descuento";
+            this.dtn_gendescuento.UseVisualStyleBackColor = true;
+            this.dtn_gendescuento.Click += new System.EventHandler(this.dtn_gendescuento_Click);
+            // 
             // Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 497);
+            this.Controls.Add(this.dtn_gendescuento);
             this.Controls.Add(this.btn_VerModCajero);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Adminnom);
+            this.Controls.Add(this.btn_bajalogica);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.nud_Existencia);
@@ -372,5 +411,7 @@
         private System.Windows.Forms.TextBox Adminnom;
         public System.Windows.Forms.ComboBox cbox_departamaneto;
         private System.Windows.Forms.Button btn_VerModCajero;
+        private System.Windows.Forms.Button btn_bajalogica;
+        private System.Windows.Forms.Button dtn_gendescuento;
     }
 }

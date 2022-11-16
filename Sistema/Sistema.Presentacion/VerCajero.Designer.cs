@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.Dgv_rCajero = new System.Windows.Forms.DataGridView();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Registered_by = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Curp_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nomina_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contra_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
@@ -65,85 +57,12 @@
             // 
             this.Dgv_rCajero.AllowUserToAddRows = false;
             this.Dgv_rCajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_rCajero.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.Registered_by,
-            this.Nombre,
-            this.Curp_,
-            this.Fecha_Nacimiento,
-            this.Nomina_,
-            this.Correo_,
-            this.Contra_});
-            this.Dgv_rCajero.Location = new System.Drawing.Point(238, 85);
+            this.Dgv_rCajero.Location = new System.Drawing.Point(251, 52);
             this.Dgv_rCajero.Name = "Dgv_rCajero";
             this.Dgv_rCajero.Size = new System.Drawing.Size(945, 391);
             this.Dgv_rCajero.TabIndex = 18;
             this.Dgv_rCajero.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_rCajero_CellClick);
             this.Dgv_rCajero.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_rCajero_CellContentClick);
-            // 
-            // Clave
-            // 
-            this.Clave.DataPropertyName = "clave";
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            this.Clave.ReadOnly = true;
-            this.Clave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Registered_by
-            // 
-            this.Registered_by.DataPropertyName = "registered_by";
-            this.Registered_by.HeaderText = "Registered_by";
-            this.Registered_by.Name = "Registered_by";
-            this.Registered_by.ReadOnly = true;
-            this.Registered_by.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Curp_
-            // 
-            this.Curp_.DataPropertyName = "curp";
-            this.Curp_.HeaderText = "Curp_";
-            this.Curp_.Name = "Curp_";
-            this.Curp_.ReadOnly = true;
-            this.Curp_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Fecha_Nacimiento
-            // 
-            this.Fecha_Nacimiento.DataPropertyName = "Fecha_Nacimiento";
-            this.Fecha_Nacimiento.HeaderText = "Fecha_Nacimiento";
-            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
-            this.Fecha_Nacimiento.ReadOnly = true;
-            this.Fecha_Nacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Nomina_
-            // 
-            this.Nomina_.DataPropertyName = "nomina";
-            this.Nomina_.HeaderText = "Nomina_";
-            this.Nomina_.Name = "Nomina_";
-            this.Nomina_.ReadOnly = true;
-            this.Nomina_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Correo_
-            // 
-            this.Correo_.DataPropertyName = "correo";
-            this.Correo_.HeaderText = "Correo_";
-            this.Correo_.Name = "Correo_";
-            this.Correo_.ReadOnly = true;
-            this.Correo_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Contra_
-            // 
-            this.Contra_.DataPropertyName = "contra";
-            this.Contra_.HeaderText = "Contra_";
-            this.Contra_.Name = "Contra_";
-            this.Contra_.ReadOnly = true;
-            this.Contra_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label1
             // 
@@ -169,7 +88,7 @@
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(23, 453);
+            this.btn_Modificar.Location = new System.Drawing.Point(24, 447);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(75, 23);
             this.btn_Modificar.TabIndex = 20;
@@ -179,7 +98,7 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(137, 453);
+            this.btn_eliminar.Location = new System.Drawing.Point(125, 447);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
             this.btn_eliminar.TabIndex = 20;
@@ -234,6 +153,7 @@
             // 
             this.nNomina.Location = new System.Drawing.Point(23, 254);
             this.nNomina.Name = "nNomina";
+            this.nNomina.ReadOnly = true;
             this.nNomina.Size = new System.Drawing.Size(167, 20);
             this.nNomina.TabIndex = 24;
             // 
@@ -254,7 +174,7 @@
             // 
             // fNacimiento
             // 
-            this.fNacimiento.Location = new System.Drawing.Point(20, 411);
+            this.fNacimiento.Location = new System.Drawing.Point(23, 412);
             this.fNacimiento.Name = "fNacimiento";
             this.fNacimiento.Size = new System.Drawing.Size(200, 20);
             this.fNacimiento.TabIndex = 36;
@@ -271,7 +191,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 392);
+            this.label6.Location = new System.Drawing.Point(24, 393);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 34;
@@ -321,7 +241,7 @@
             // 
             // btn_VerModCajero
             // 
-            this.btn_VerModCajero.Location = new System.Drawing.Point(1054, 46);
+            this.btn_VerModCajero.Location = new System.Drawing.Point(1067, 13);
             this.btn_VerModCajero.Name = "btn_VerModCajero";
             this.btn_VerModCajero.Size = new System.Drawing.Size(129, 23);
             this.btn_VerModCajero.TabIndex = 20;
@@ -333,6 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1222, 543);
             this.Controls.Add(this.fNacimiento);
             this.Controls.Add(this.label8);
@@ -389,13 +310,5 @@
         private System.Windows.Forms.TextBox Adminnom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_VerModCajero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Registered_by;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Curp_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Nacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nomina_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contra_;
     }
 }

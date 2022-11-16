@@ -41,6 +41,7 @@
             this.Dgv_rVentas = new System.Windows.Forms.DataGridView();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.btn_buscartodas = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rVentas)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 82);
+            this.label2.Location = new System.Drawing.Point(28, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 5;
@@ -117,7 +118,7 @@
             // cb_Departamento
             // 
             this.cb_Departamento.FormattingEnabled = true;
-            this.cb_Departamento.Location = new System.Drawing.Point(31, 98);
+            this.cb_Departamento.Location = new System.Drawing.Point(31, 90);
             this.cb_Departamento.Name = "cb_Departamento";
             this.cb_Departamento.Size = new System.Drawing.Size(151, 21);
             this.cb_Departamento.TabIndex = 8;
@@ -125,7 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 127);
+            this.label5.Location = new System.Drawing.Point(28, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 5;
@@ -135,7 +136,7 @@
             // cb_Caja
             // 
             this.cb_Caja.FormattingEnabled = true;
-            this.cb_Caja.Location = new System.Drawing.Point(31, 143);
+            this.cb_Caja.Location = new System.Drawing.Point(31, 135);
             this.cb_Caja.Name = "cb_Caja";
             this.cb_Caja.Size = new System.Drawing.Size(151, 21);
             this.cb_Caja.TabIndex = 8;
@@ -151,12 +152,13 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(343, 112);
+            this.btn_buscar.Location = new System.Drawing.Point(344, 125);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 10;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_aceptar
             // 
@@ -168,11 +170,22 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // btn_buscartodas
+            // 
+            this.btn_buscartodas.Location = new System.Drawing.Point(336, 152);
+            this.btn_buscartodas.Name = "btn_buscartodas";
+            this.btn_buscartodas.Size = new System.Drawing.Size(93, 23);
+            this.btn_buscartodas.TabIndex = 20;
+            this.btn_buscartodas.Text = "Buscar Todas";
+            this.btn_buscartodas.UseVisualStyleBackColor = true;
+            this.btn_buscartodas.Click += new System.EventHandler(this.btn_buscartodas_Click);
+            // 
             // ReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_buscartodas);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.Dgv_rVentas);
@@ -184,6 +197,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ReporteVentas";
             this.Text = "ReporteVentas";
+            this.Load += new System.EventHandler(this.ReporteVentas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_rVentas)).EndInit();
@@ -207,5 +221,6 @@
         private System.Windows.Forms.DataGridView Dgv_rVentas;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.Button btn_buscartodas;
     }
 }

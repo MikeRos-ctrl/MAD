@@ -16,6 +16,7 @@ namespace Sistema.Presentacion
 
         string Nombre_Actual = "";
         string claveCajero = "";
+        int nomina = 0;
 
 
         public RegistroEmpleado(string Nombre)
@@ -99,27 +100,16 @@ namespace Sistema.Presentacion
         {
 
             registeredBy.AppendText(Nombre_Actual);
-            claveCajero = Guid.NewGuid().ToString("N").Substring(0, 6);
+            claveCajero = Guid.NewGuid().ToString("X").Substring(1, 6);
             ClaveUsu.AppendText(claveCajero);
-            
 
-            //string clave = registeredBy.Text;
+            Random rnd = new Random();
+            nomina = rnd.Next(100000000, 1000000000);
+            string nominaStr = nomina.ToString();
+            nNomina.AppendText(nominaStr);
 
-            //try
-            //{
-            //    DataTable Tabla = new DataTable();
-            //    Tabla = N_Administrador.Get_Administradores(clave);
-            //    string registered_by_ = Convert.ToString(Tabla.Rows[0][0]);
-            //}
-            //catch (Exception ex)
-            //{
+            //nomina = Guid.NewGuid().ToString("n").Substring(0, 12);
 
-
-            //    MessageBox.Show(ex.Message + ex.StackTrace);
-            //}
-
-            //string registered_by_ = registeredBy.Row[fila].Cells[0].Value.ToString();
-            //registeredBy.DataSource = N_Administrador.Login_Administrador(registered_by_).Rows[1].ToString();
 
 
         }

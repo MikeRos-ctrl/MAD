@@ -92,6 +92,7 @@ namespace Sistema.Presentacion
             Adminnom.Clear();
             NomCompleto.Clear();
             CURP.Clear();
+
             nNomina.Clear();
             Correo.Clear();
             Adminnom.Clear();
@@ -188,7 +189,5 @@ namespace Sistema.Presentacion
         {
 
         }
-
-      
     }
 }

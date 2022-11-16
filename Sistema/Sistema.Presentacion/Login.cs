@@ -37,7 +37,7 @@ namespace Sistema.Presentacion
             {
                 DataTable table = new DataTable();
                 table = N_Administrador.Login_Administador(correo);
-                string clave = Convert.ToString(table.Rows[0][1]);
+               
                 //RegistroEmpleado who = new RegistroEmpleado();
                 //who.registeredBy.Text = correo;
 
@@ -49,6 +49,7 @@ namespace Sistema.Presentacion
                 else
                 {
                     string user_contra = Convert.ToString(table.Rows[0][0]);//contraseña
+                    string clave = Convert.ToString(table.Rows[0][1]);
 
                     if (user_contra.CompareTo(contra) == 0)
                     {
@@ -81,7 +82,7 @@ namespace Sistema.Presentacion
             {
                 DataTable table = new DataTable();
                 table = N_Cajero.sp_Login_Cajeros(correo);
-
+             
                 if (table.Rows.Count == 0)//usuario no existe
                 {
                     MessageBox.Show("Usuario inexistente");
@@ -89,14 +90,18 @@ namespace Sistema.Presentacion
                 else
                 {
                     string user_contra = Convert.ToString(table.Rows[0][0]);//contraseña
+                    string correO = Convert.ToString(table.Rows[0][1]);
+                    string clave = Convert.ToString(table.Rows[0][2]);
+
 
                     if (user_contra.CompareTo(contra) == 0)
                     {
                         MessageBox.Show("Todo esta bien y ingresar seccion");
 
-                        InicioCajero xd = new InicioCajero();
+                        ElegirCaja xd = new ElegirCaja(correO, clave);
                         xd.Show();
                         this.Hide();
+
                     }
                     else
                     {

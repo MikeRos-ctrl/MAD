@@ -167,6 +167,7 @@
             // 
             this.nNomina.Location = new System.Drawing.Point(59, 246);
             this.nNomina.Name = "nNomina";
+            this.nNomina.ReadOnly = true;
             this.nNomina.Size = new System.Drawing.Size(167, 20);
             this.nNomina.TabIndex = 1;
             this.nNomina.TextChanged += new System.EventHandler(this.Contrasena_TextChanged);
