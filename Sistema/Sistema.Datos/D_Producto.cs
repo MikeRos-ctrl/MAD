@@ -11,6 +11,63 @@ namespace Sistema.Datos
 {
     public class D_Producto
     {
+        
+
+
+
+        public DataTable Get_existencia_producto(string Descripcion)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Connection.Get_Instancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("Get_existencia_producto", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = Descripcion;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+        }  
+
+
+        public DataTable sp_Get_PuntoRe()
+        {
+            SqlDataReader Resultado;
+            DataTable Table = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon = Connection.Get_Instancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("sp_Get_PuntoRe", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Table.Load(Resultado);
+                return Table;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+        }
 
         public DataTable sp_Get_Producto()
         {
@@ -74,6 +131,34 @@ namespace Sistema.Datos
             return Rpta;
         }
 
+        public string sp_GestionarProduPu(Producto Obj)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Connection.Get_Instancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("sp_GestionarProduPu", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@codigo", SqlDbType.VarChar).Value = Obj.codigo;
+                Comando.Parameters.Add("@registered_by", SqlDbType.VarChar).Value = Obj.registered_by;
+                Comando.Parameters.Add("@existencia", SqlDbType.Int).Value = Obj.existencia;
+                SqlCon.Open();
+                //Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar el registro";
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "OK";
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+
+            return Rpta;
+        }
 
         public DataTable sp_Get_ModProducto()
         {
