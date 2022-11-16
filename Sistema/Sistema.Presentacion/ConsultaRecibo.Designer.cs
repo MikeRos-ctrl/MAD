@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Dgv_cRecibos = new System.Windows.Forms.DataGridView();
             this.btn_recibo = new System.Windows.Forms.Button();
             this.cb_numRecibos = new System.Windows.Forms.ComboBox();
@@ -54,6 +55,9 @@
             this.ID = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.codigopro = new System.Windows.Forms.TextBox();
+            this.ClaveCa = new System.Windows.Forms.Label();
+            this.hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_cRecibos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +80,7 @@
             this.btn_recibo.TabIndex = 10;
             this.btn_recibo.Text = "Generar recibo";
             this.btn_recibo.UseVisualStyleBackColor = true;
+            this.btn_recibo.Click += new System.EventHandler(this.btn_recibo_Click);
             // 
             // cb_numRecibos
             // 
@@ -298,11 +303,37 @@
             this.codigopro.Size = new System.Drawing.Size(195, 20);
             this.codigopro.TabIndex = 25;
             // 
+            // ClaveCa
+            // 
+            this.ClaveCa.AutoSize = true;
+            this.ClaveCa.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClaveCa.Location = new System.Drawing.Point(300, 30);
+            this.ClaveCa.Name = "ClaveCa";
+            this.ClaveCa.Size = new System.Drawing.Size(64, 13);
+            this.ClaveCa.TabIndex = 167;
+            this.ClaveCa.Text = "ClaveCajero";
+            // 
+            // hora
+            // 
+            this.hora.AutoSize = true;
+            this.hora.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.hora.Location = new System.Drawing.Point(414, 30);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(30, 13);
+            this.hora.TabIndex = 167;
+            this.hora.Text = "Hora";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ConsultaRecibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 414);
+            this.Controls.Add(this.hora);
+            this.Controls.Add(this.ClaveCa);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.cb_tienemerma);
             this.Controls.Add(this.motivo);
@@ -366,5 +397,8 @@
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox codigopro;
+        public System.Windows.Forms.Label ClaveCa;
+        public System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

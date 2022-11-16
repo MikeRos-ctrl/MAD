@@ -185,6 +185,7 @@ namespace Sistema.Presentacion
                 string Caja_ = Caja.Text;
                 string Cajero_ = Cajero.Text;
                 var creacion_ = Fecha.Text;
+        
                 var creacionhora_ = Hora.Text;
                 var creaciondate = DateTime.Parse(creacion_);
                 string clave_ = ClaveCa.Text;
@@ -202,39 +203,6 @@ namespace Sistema.Presentacion
             else
             {
 
-                string respuesta = "";
-                string respuesta2  = "";
-
-
-       
-
-                foreach (DataGridViewRow row in Dgv_VCarrito.Rows)
-                {
-
-               
-                        if (row.Cells["Codigo"].Value != null && row.Cells["Producto"].Value != null 
-                        && row.Cells["Cantidad"].Value != null && row.Cells["Precio Unitario"].Value != null 
-                        && row.Cells["Subtotal"].Value != null && row.Cells["Departamento"].Value != null)
-                        {
-
-
-                            codigo_ = row.Cells["Codigo"].Value.ToString();
-                            producto_ = row.Cells["Producto"].Value.ToString();
-                            cantidad_ = row.Cells["Cantidad"].Value.ToString();
-                            preuni_ = row.Cells["Precio Unitario"].Value.ToString();
-                            subtotal_ = row.Cells["Subtotal"].Value.ToString();
-                            Departamento_ = row.Cells["Departamento"].Value.ToString();
-                      
-
-                            respuesta = N_Venta.sp_vender(codigo_, producto_, Int32.Parse(cantidad_), "U");
-                            respuesta2 = N_Recibos.sp_Recibo(Int32.Parse(Numero_), codigo_, Cajero_, Caja_, producto_, Pago, Departamento_, cantidad_, subtotal_, Int32.Parse(Total_), creaciondate);
-                        }
-
-                    
-
-                }
-
-              
 
                 Document PDF = new Document(); //Creacion del documento PDF
                 Page page1 = PDF.Pages.Add(); //Generar una nueva pagina y devolver la instancia de dicha pagina
@@ -278,13 +246,6 @@ namespace Sistema.Presentacion
                 txthora.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
 
 
-                //string Producto = producto_;
-                //TextFragment txtproducto = new TextFragment(Producto);
-                //txtproducto.Position = new Position(230, 720);
-                //txtproducto.TextState.FontSize = 15;
-                //txtproducto.TextState.Font = FontRepository.FindFont("Arial");
-                //txtproducto.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
-
                 TextBuilder txtBuilder = new TextBuilder(page1);
                 txtBuilder.AppendText(txtIdrecibo);
                 txtBuilder.AppendText(txtcajero);
@@ -326,9 +287,9 @@ namespace Sistema.Presentacion
                 txtBuilderS.AppendText(txttotal);
                 editPDF.Save("Recibos\\Ticket de compra - " + Idrecibos + ".pdf");
 
-                int pos = 20;
+               
                 var fileRecibo2 = @"Recibos\\Ticket de compra - " + Idrecibos + ".pdf";
-                Document editPDF2 = new Document(fileRecibo);
+                Document editPDF2 = new Document(fileRecibo2);
                 Page pdfPage3 = (Page)editPDF2.Pages[1];
 
 
@@ -336,35 +297,105 @@ namespace Sistema.Presentacion
                 table = N_Venta.sp_Get_Vcarrito();
                 Numero_Pedidos = Convert.ToString(table.Rows.Count);//numero de Ordenes
 
-
+                int pos = 60;
                 for (int i = 0; i < int.Parse(Numero_Pedidos); i++)
                 {
                     string cantab = Convert.ToString(table.Rows[i][3]);
                     string preuni = Convert.ToString(table.Rows[i][4]);
+                    string desc = Convert.ToString(table.Rows[i][6]);
+                    string importe = Convert.ToString(table.Rows[i][7]);
+                    string Um = Convert.ToString(table.Rows[i][8]);
+                    string produc = Convert.ToString(table.Rows[i][1]);
+                    string depa = Convert.ToString(table.Rows[i][2]);
 
                     string Cantidad = cantab;
                     TextFragment txtcantidad = new TextFragment(Cantidad);
-                    txtcantidad.Position = new Position(60, 595 - (i * pos));
-                    txtcantidad.TextState.FontSize = 15;
+                    txtcantidad.Position = new Position(60, 575 - (i * pos));
+                    txtcantidad.TextState.FontSize = 12;
                     txtcantidad.TextState.Font = FontRepository.FindFont("Arial");
                     txtcantidad.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
 
-                    string PrecioUni = preuni;
+                    string PrecioUni = "$" + preuni;
                     TextFragment txtpreciouni = new TextFragment(PrecioUni);
-                    txtpreciouni.Position = new Position(200, 595 - (i * pos));
-                    txtpreciouni.TextState.FontSize = 15;
+                    txtpreciouni.Position = new Position(155, 575 - (i * pos));
+                    txtpreciouni.TextState.FontSize = 12;
                     txtpreciouni.TextState.Font = FontRepository.FindFont("Arial");
                     txtpreciouni.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                    string Descuento = desc;
+                    TextFragment txtdesc = new TextFragment(Descuento);
+                    txtdesc.Position = new Position(300, 575 - (i * pos));
+                    txtdesc.TextState.FontSize = 12;
+                    txtdesc.TextState.Font = FontRepository.FindFont("Arial");
+                    txtdesc.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+                    string Importe = "$" + importe;
+                    TextFragment txtimport = new TextFragment(Importe);
+                    txtimport.Position = new Position(495, 575 - (i * pos));
+                    txtimport.TextState.FontSize = 12;
+                    txtimport.TextState.Font = FontRepository.FindFont("Arial");
+                    txtimport.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
+
+                    string Producto = depa + "   |   "  + produc + "   |   " + Um;
+                    TextFragment txtpro = new TextFragment(Producto);
+                    txtpro.Position = new Position(60, 600 - (i * pos));
+                    txtpro.TextState.FontSize = 12;
+                    txtpro.TextState.Font = FontRepository.FindFont("Arial");
+                    txtpro.TextState.ForegroundColor = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
+
 
                     TextBuilder txtBuilderT = new TextBuilder(pdfPage3);
                     txtBuilderT.AppendText(txtcantidad);
                     txtBuilderT.AppendText(txtpreciouni);
+                    txtBuilderT.AppendText(txtdesc);
+                    txtBuilderT.AppendText(txtimport);
+                    txtBuilderT.AppendText(txtpro);
 
                 }
-                editPDF2.Save("Recibos\\Ticket de compra - " + Idrecibos[0].ToString() + ".pdf");
+                editPDF2.Save("Recibos\\Ticket de compra - " + Idrecibos.ToString() + ".pdf");
+
+    
 
 
-                if (respuesta.Equals("OK") || respuesta2.Equals("OK"))
+
+                string respuesta = "";
+                string respuesta2  = "";
+
+
+       
+
+                foreach (DataGridViewRow row in Dgv_VCarrito.Rows)
+                {
+
+               
+                        if (row.Cells["Codigo"].Value != null && row.Cells["Producto"].Value != null 
+                        && row.Cells["Cantidad"].Value != null && row.Cells["Precio Unitario"].Value != null 
+                        && row.Cells["Subtotal"].Value != null && row.Cells["Departamento"].Value != null)
+                        {
+
+
+                            codigo_ = row.Cells["Codigo"].Value.ToString();
+                            producto_ = row.Cells["Producto"].Value.ToString();
+                            cantidad_ = row.Cells["Cantidad"].Value.ToString();
+                            preuni_ = row.Cells["Precio Unitario"].Value.ToString();
+                            subtotal_ = row.Cells["Subtotal"].Value.ToString();
+                            Departamento_ = row.Cells["Departamento"].Value.ToString();
+                      
+
+                            respuesta = N_Venta.sp_vender(codigo_, producto_, Int32.Parse(cantidad_), "U");
+                            respuesta2 = N_Recibos.sp_Recibo(Int32.Parse(Numero_), codigo_, Cajero_, Caja_, producto_, Pago, Departamento_, cantidad_, subtotal_, Int32.Parse(Total_), creaciondate);
+                        }
+
+                    
+
+                }
+
+              
+
+
+
+                    if (respuesta.Equals("OK") || respuesta2.Equals("OK"))
                     {
                         MessageBox.Show("Se a ejecutado la compra", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

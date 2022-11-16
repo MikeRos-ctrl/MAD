@@ -435,7 +435,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(326, 561);
+            this.button1.Location = new System.Drawing.Point(327, 561);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 27);
             this.button1.TabIndex = 4;
@@ -510,17 +510,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox CodigoV;
-        private System.Windows.Forms.TextBox Fecha;
         public System.Windows.Forms.TextBox Caja;
         private System.Windows.Forms.Timer FechaActual;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Hora;
         private System.Windows.Forms.DataGridView Dgv_Ventas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox nProducto;
         private System.Windows.Forms.NumericUpDown nud_Cantidad;
-        private System.Windows.Forms.TextBox Cajero;
         private System.Windows.Forms.Button btn_anadir;
         private System.Windows.Forms.Button btn_vender;
         private System.Windows.Forms.TextBox Busqueda;
@@ -535,8 +532,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView Dgv_VCarrito;
         private System.Windows.Forms.Button btn_limpiar;
-        private System.Windows.Forms.Label ClaveCa;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox Fecha;
+        public System.Windows.Forms.TextBox Hora;
+        public System.Windows.Forms.TextBox Cajero;
+        public System.Windows.Forms.Label ClaveCa;
     }
 }
