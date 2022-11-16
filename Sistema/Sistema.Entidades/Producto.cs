@@ -15,7 +15,7 @@ namespace Sistema.Entidades
         public string precio_unitario { get; set; }
         public string unidad_de_medida { get; set; }
         public string costo { get; set; }
-        public string existencia { get; set; }
+        public int existencia { get; set; }
         public string punto_de_reorden { get; set; }
         public string Op { get; set; }
     }
