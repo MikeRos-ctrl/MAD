@@ -73,8 +73,9 @@ AS
 		[Precio unitario] as 'Precio Unitario',
 		[Existencia]  as Existencia,
 		[Departamento] as Departamento,
+		[Unidad de medida],
 		[Punto de reorden] as 'Punto de Reoden', 
-		Isnull(Descuento, 'No Tiene Descuento') as 'Descuento del producto',
+		Isnull(Descuento, '0%') as 'Descuento del producto',
 		[Costo] as Subtotal,
 		Isnull([Precio Con Descuento], [Costo]) as 'Total a pagar'
 		From  vw_GetProducto P
@@ -156,10 +157,11 @@ as
 	Select 
 		Codigo,
 		Producto,
+	    [Unidad de medida],
 		Departamento,
 		Cantidad,
+	    [Precio Unitario],
 		Subtotal,
-		[Precio Unitario],
 		[Descuento del producto],
 		[Total a pagar]
 
@@ -179,6 +181,7 @@ AS
 	Select 
 		GV.Codigo, 
 		V.nombreP as Producto,
+		GV.[Unidad de medida],
 		GV.Departamento,
 		V.Cantidad as Cantidad,
 		GV.[Precio Unitario] as 'Precio Unitario',

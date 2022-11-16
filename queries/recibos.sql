@@ -62,19 +62,29 @@ create proc sp_GetRecibo
 @Parametro varchar(250)
 as
 Select 
-			IDr as 'ID', 
-			IdRecibo as 'Numero de Recibo',
-			codigo as 'Codigo del producto',
-			produc as Producto,
-			caja as Caja,
-			forma_pago as 'Forma de pago',
-			cantidad as Cantidad,
-			subtotal as Subtotal,
-			total as Total
-		From data_recibos
+			
+			R.IDr as 'ID', --0
+			R.IdRecibo as 'Numero de Recibo',--1
+			R.codigo as 'Codigo del producto',--2
+			GV.Departamento, --3
+			R.produc as Producto,--4
+			R.caja as Caja,--5
+			R.Cajero as cajero,--6
+			R.forma_pago as 'Forma de pago',--7
+			GV.[Unidad de medida],--8
+			R.cantidad as Cantidad,--9
+			GV.[Precio Unitario],--10
+			R.subtotal as Subtotal,--11
+			GV.[Descuento del producto],--12
+			R.total as Total,--13
+			R.fecha_creacion as 'Fecha creacion'--14
+		From data_recibos R
+		left join vw_GetVentas GV
+		on R.codigo =  GV.Codigo
 		where IdRecibo like '%' + @Parametro + '%' And status_ = 1
 go
 
+exec sp_GetRecibo
 
 If OBJECT_ID ('sp_GetnumRe') is not null
 	Drop procedure sp_GetnumRe;
